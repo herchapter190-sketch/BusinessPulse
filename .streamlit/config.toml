@@ -1,0 +1,134 @@
+# Streamlit settings for BusinessPulse.
+# Theme colours and font files mirror config/design.py (the design system's
+# single source of truth). tests/test_design_system.py fails if the two drift apart.
+
+[browser]
+# Do not send anonymous usage statistics to Streamlit.
+# BusinessPulse must not transmit any data to external services.
+gatherUsageStats = false
+
+[server]
+# Only accept connections from this computer (not from other devices on the
+# network). This also stops Streamlit looking up the public IP address online.
+# 127.0.0.1 is used instead of "localhost" because on Windows "localhost" may
+# resolve to the IPv6 address ::1, which the server does not listen on.
+address = "127.0.0.1"
+port = 8501
+# Largest file the upload box accepts, in MB. Keep in step with
+# MAX_UPLOAD_MB in config/settings.py.
+maxUploadSize = 50
+# Serve the bundled fonts in static/fonts (from this computer only; nothing is
+# downloaded). Streamlit requires the folder to be called "static".
+enableStaticServing = true
+
+[client]
+# Hide developer menu items (Deploy, Rerun, Clear cache) for a clean product look.
+toolbarMode = "minimal"
+
+# ---------------------------------------------------------------------------
+# "Emerald Galaxy" theme (see config/design.py)
+# [theme] holds what both themes share; [theme.light] and [theme.dark] hold
+# the colours. Viewers switch between them with the Light / Dark switch in the
+# sidebar (ui/theme_switch.js).
+# ---------------------------------------------------------------------------
+[theme]
+showWidgetBorder = true
+font = "IBM Plex Sans, Segoe UI, sans-serif"
+headingFont = "IBM Plex Sans, Segoe UI, sans-serif"
+codeFont = "IBM Plex Mono, Consolas, monospace"
+baseFontSize = 15
+# h1 = page title (st.title), h3 = section heading (st.subheader)
+headingFontSizes = ["32px", "24px", "20px", "16px", "14px", "13px"]
+headingFontWeights = [600, 600, 600, 600, 600, 600]
+metricValueFontSize = "26px"
+metricValueFontWeight = 600
+baseRadius = "16px"
+buttonRadius = "10px"
+paddingTop = "2.5rem"
+chartCategoricalColors = ["#3298E2", "#B88A1E", "#8A7BE0", "#E04729", "#1F948E", "#B66BCE"]
+
+# Bundled open-licence fonts (static/fonts; licences alongside them).
+[[theme.fontFaces]]
+family = "IBM Plex Sans"
+url = "app/static/fonts/IBMPlexSans-Regular.ttf"
+weight = 400
+
+[[theme.fontFaces]]
+family = "IBM Plex Sans"
+url = "app/static/fonts/IBMPlexSans-Medium.ttf"
+weight = 500
+
+[[theme.fontFaces]]
+family = "IBM Plex Sans"
+url = "app/static/fonts/IBMPlexSans-SemiBold.ttf"
+weight = 600
+
+[[theme.fontFaces]]
+family = "IBM Plex Mono"
+url = "app/static/fonts/IBMPlexMono-Regular.ttf"
+weight = 400
+
+[[theme.fontFaces]]
+family = "IBM Plex Mono"
+url = "app/static/fonts/IBMPlexMono-Medium.ttf"
+weight = 500
+
+[theme.light]
+primaryColor = "#00705F"               # LIGHT primary (turquoise, deepened)
+backgroundColor = "#EAF4F0"            # LIGHT canvas (pale teal-mint)
+secondaryBackgroundColor = "#E1EEEA"   # LIGHT surface_subtle
+textColor = "#08241F"                  # LIGHT ink
+linkColor = "#00705F"
+borderColor = "#C6DDD6"
+dataframeBorderColor = "#D9EAE5"       # LIGHT divider
+dataframeHeaderBackgroundColor = "#E1EEEA"
+redColor = "#A6302A"
+redTextColor = "#A6302A"
+redBackgroundColor = "#F8E1DE"
+orangeColor = "#7A560C"
+orangeTextColor = "#7A560C"
+orangeBackgroundColor = "#F6EBCF"
+greenColor = "#1B6A44"
+greenTextColor = "#1B6A44"
+greenBackgroundColor = "#DDF1E6"
+blueColor = "#1D5A88"
+blueTextColor = "#1D5A88"
+blueBackgroundColor = "#DCEAF5"
+
+[theme.light.sidebar]
+backgroundColor = "#E0EFEA"            # LIGHT sidebar
+secondaryBackgroundColor = "#CFE6DF"   # LIGHT sidebar_surface
+textColor = "#2B4842"                  # LIGHT sidebar_text
+primaryColor = "#00705F"               # LIGHT primary
+linkColor = "#00705F"
+borderColor = "#BCD6CE"                # LIGHT sidebar_border
+
+[theme.dark]
+primaryColor = "#2FE0C2"               # DARK primary (turquoise)
+backgroundColor = "#050B0C"            # DARK canvas (cosmic black)
+secondaryBackgroundColor = "#112423"   # DARK surface_subtle
+textColor = "#E6F4F0"                  # DARK ink
+linkColor = "#5CE6D0"
+borderColor = "#1E3936"
+dataframeBorderColor = "#152D2B"
+dataframeHeaderBackgroundColor = "#112423"
+redColor = "#FF8D84"
+redTextColor = "#FF8D84"
+redBackgroundColor = "#2E1416"
+orangeColor = "#F0C66A"
+orangeTextColor = "#F0C66A"
+orangeBackgroundColor = "#2A220F"
+greenColor = "#6EE0A4"
+greenTextColor = "#6EE0A4"
+greenBackgroundColor = "#0D2A1D"
+blueColor = "#7EC6F0"
+blueTextColor = "#7EC6F0"
+blueBackgroundColor = "#0E2230"
+
+[theme.dark.sidebar]
+backgroundColor = "#040A0A"
+secondaryBackgroundColor = "#0F2120"
+textColor = "#B2CBC5"
+primaryColor = "#2FE0C2"
+linkColor = "#5CE6D0"
+borderColor = "#17302E"

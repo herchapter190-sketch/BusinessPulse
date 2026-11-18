@@ -1,0 +1,1254 @@
+/* ==========================================================================
+   BusinessPulse design system: "Emerald Galaxy"
+   --------------------------------------------------------------------------
+   Values written in double curly braces are filled in from config/design.py
+   by ui/components.py, so colours and sizes are defined in one place only.
+
+   Light and dark: colour tokens arrive as CSS light-dark(<light>, <dark>).
+   Streamlit sets `color-scheme` on the app (and separately on the sidebar)
+   from the active theme, so the browser picks the right side instantly when
+   the viewer uses the sidebar theme switch (ui/theme_switch.js). No rerun.
+
+   Character: a static space backdrop (CSS gradients only, no images), glass
+   panels with a light top edge and soft depth, one turquoise action colour.
+   No hover lifts and no animation. Blur is used on large panels only and is
+   switched off on phones and for "reduce transparency" (solid surfaces).
+   Fonts are the bundled files in static/fonts, loaded by
+   .streamlit/config.toml ([[theme.fontFaces]]).
+
+   Most styling comes from the native themes (.streamlit/config.toml). This
+   file only adds what the theme can't express. It targets:
+     1. `st-key-bp_*` classes: Streamlit adds `st-key-<key>` to containers
+        created with a `key`; all BusinessPulse components use the `bp_` prefix.
+     2. Documented `data-testid` attributes (checked against the installed
+        Streamlit by tests/test_design_system.py).
+     3. Inside a Plotly chart, only its `svg text` (stable plotly.js structure)
+        to recolour chart text per theme.
+   If a hook ever disappears, the app still works; only the extra styling is lost.
+   ========================================================================== */
+
+/* The element that carries these styles takes no space (see ui/components.py). */
+[data-testid="stElementContainer"]:has(.bp-styles-marker) {
+  display: none;
+}
+
+/* ---- Backdrop ------------------------------------------------------------ */
+/* Painted once on the app root, which never scrolls (the main area scrolls inside
+   it), so nothing is repainted while scrolling. Layers, top to bottom: the soft
+   disc of a large planet in the top-right corner, its glow, a cooler aurora
+   bottom-left, then four sparse, faint star tiles of different sizes (so no
+   repeat pattern shows) over the canvas colour. Stars are kept tiny and dim so
+   they never read as marks in the text. */
+[data-testid="stApp"] {
+  background-color: {{canvas}};
+  background-image:
+    radial-gradient(circle 440px at 100% 0%, {{planet}} 0 97%, transparent 100%),
+    radial-gradient(1100px 760px at 92% -6%, {{backdrop_glow}}, transparent 64%),
+    radial-gradient(900px 640px at -12% 108%, {{backdrop_aurora}}, transparent 62%),
+    radial-gradient(circle at 17% 23%, {{star}} 0 0.7px, transparent 1.3px),
+    radial-gradient(circle at 71% 64%, {{star}} 0 0.7px, transparent 1.3px),
+    radial-gradient(circle at 43% 81%, {{star}} 0 1px, transparent 1.6px),
+    radial-gradient(circle at 88% 12%, {{star}} 0 0.7px, transparent 1.3px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 389px 389px, 547px 547px, 619px 619px, 733px 733px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat, repeat, repeat;
+}
+
+/* ---- Glass panels ---------------------------------------------------------- */
+/* Top bar: glass with one hairline; content scrolling underneath is blurred, so
+   it never competes with the logo or the menu. */
+[data-testid="stHeader"] {
+  background: {{glass}};
+  border-bottom: 1px solid {{border}};
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+}
+
+/* ---- Reading width ------------------------------------------------------- */
+/* One reading column for every page: capped width, even gutters, and the page
+   title starting a fixed distance below the top bar (Streamlit's default leaves
+   a 96px band). */
+[data-testid="stMainBlockContainer"] {
+  max-width: {{content_max_width}};
+  padding-top: calc({{space_4xl}} + {{space_xl}});
+  padding-left: {{space_2xl}};
+  padding-right: {{space_2xl}};
+  padding-bottom: {{space_4xl}};
+}
+[data-testid="stMain"] {
+  font-feature-settings: "tnum" 1;   /* figures line up in every column of numbers */
+}
+[data-testid="stMain"] h1,
+[data-testid="stMain"] h2,
+[data-testid="stMain"] h3 {
+  letter-spacing: -0.005em;
+}
+[data-testid="stMain"] h1 {
+  font-family: {{display_font_stack}};
+  letter-spacing: -0.012em;
+  line-height: 1.1;
+}
+/* Section headings (st.subheader) use the heading font too; the theme's headingFont
+   alone didn't reach them (checked in the browser with Streamlit 1.67). */
+[data-testid="stMain"] h2,
+[data-testid="stMain"] h3 {
+  font-family: {{heading_font_stack}};
+}
+/* Captions carry real context (periods, row counts), so they use secondary ink,
+   not Streamlit's faded default. */
+[data-testid="stCaptionContainer"] {
+  color: {{ink_secondary}};
+}
+
+/* ---- Logo: turquoise tile, ink wordmark, follows the theme --------------- */
+/* The logo is an <img>, which can't follow the theme. Hide its pixels and paint
+   the box through the same one-colour SVG used as a mask: the tile (the first
+   28 of the logo's 176 units, 16%) in the primary colour, the wordmark in ink.
+   Without this hook the plain one-colour logo still shows. */
+[data-testid="stSidebarLogo"],
+[data-testid="stHeaderLogo"] {
+  object-position: -10000px 0;
+  background: linear-gradient(90deg, {{primary}} 0 17%, {{ink}} 17%);
+  -webkit-mask: {{logo_mask}} left center / contain no-repeat;
+  mask: {{logo_mask}} left center / contain no-repeat;
+}
+[data-testid="stHeaderLogo"] {
+  background: {{primary}};
+  -webkit-mask-image: {{icon_mask}};
+  mask-image: {{icon_mask}};
+}
+
+/* ---- Sidebar & navigation (follows the theme) --------------------------- */
+/* A glass column over the backdrop, with a light inner edge on the right. */
+[data-testid="stSidebar"] {
+  max-width: 264px;   /* compact; max-width wins over Streamlit's inline width */
+  background: {{glass_sidebar}};
+  border-right: 1px solid {{sidebar_border}};
+  box-shadow: inset -1px 0 0 {{glass_edge}};
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(20px) saturate(140%);
+}
+/* Groups (Prepare / Analyse / Share): small caps labels with room above, so the
+   workflow reads as three steps. */
+[data-testid="stNavSectionHeader"] {
+  color: {{sidebar_muted}};
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: {{space_md}};
+}
+/* Items: compact rows with quiet text and icons; the selected page gets a raised
+   surface, ink text, a turquoise icon, a turquoise bar on its left edge and a
+   soft glow. */
+[data-testid="stSidebarNavLink"] {
+  border-radius: {{radius_control}};
+  box-shadow: inset 3px 0 0 transparent;
+  min-height: 36px;
+}
+[data-testid="stSidebarNavLink"] span {
+  color: {{sidebar_text}};
+}
+[data-testid="stSidebarNavLink"]:hover {
+  background-color: {{sidebar_surface}};
+}
+[data-testid="stSidebarNavLink"]:hover span {
+  color: {{ink}};
+}
+[data-testid="stSidebarNavLink"]:focus-visible {
+  outline: 2px solid {{primary}};
+  outline-offset: -2px;
+}
+[data-testid="stSidebarNavLink"][aria-current="page"] {
+  background-color: {{sidebar_surface}};
+  box-shadow: inset 3px 0 0 {{primary}}, 0 0 22px -8px {{primary_glow}};
+}
+[data-testid="stSidebarNavLink"][aria-current="page"] [data-testid="stIconMaterial"] {
+  color: {{primary}};
+}
+[data-testid="stSidebarNavLink"][aria-current="page"] span {
+  color: {{ink}};
+  font-weight: 600;
+}
+/* Streamlit draws its own rule under the navigation; the dataset card below has
+   one already, so hide this one to avoid a double line and an empty gap. */
+[data-testid="stSidebarNavSeparator"] {
+  display: none;
+}
+/* Streamlit leaves a tall empty band above the sidebar's own content. */
+[data-testid="stSidebarUserContent"] {
+  padding-top: {{space_sm}};
+}
+
+/* Current-dataset card under the navigation: a small raised panel. */
+.st-key-bp_sidebar_dataset {
+  background: {{sidebar_surface}};
+  border: 1px solid {{sidebar_border}};
+  border-radius: {{radius_card}};
+  box-shadow: inset 0 1px 0 {{glass_edge}};
+  padding: {{space_md}} {{space_lg}} {{space_lg}} {{space_lg}};
+  margin-top: {{space_sm}};
+}
+/* Scoped to the card so Streamlit's own markdown paragraph sizes don't win. */
+.st-key-bp_sidebar_dataset p.bp-sidebar-label {
+  color: {{sidebar_muted}};
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 {{space_sm}} 0;
+}
+.st-key-bp_sidebar_dataset p.bp-sidebar-file {
+  color: {{ink}};
+  font-family: {{mono_font_stack}};
+  font-size: {{font_mono}};
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  margin: 0 0 {{space_xs}} 0;
+}
+/* "No data loaded" is words, not a file name, so it stays in the interface font. */
+.st-key-bp_sidebar_dataset p.bp-sidebar-empty {
+  color: {{ink}};
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 {{space_xs}} 0;
+}
+.st-key-bp_sidebar_dataset p.bp-sidebar-meta {
+  color: {{sidebar_text}};
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Light / dark switch (ui/components.py theme_switch): a pill with two segments;
+   the active one is filled turquoise. Real <button>s with aria-pressed, so it
+   works with the keyboard and screen readers. */
+.st-key-bp_theme_switch {
+  margin-top: {{space_sm}};
+}
+.bp-theme-switch {
+  display: flex;
+  gap: {{space_xs}};
+  padding: {{space_xs}};
+  background: {{sidebar_surface}};
+  border: 1px solid {{sidebar_border}};
+  border-radius: {{radius_badge}};
+}
+.bp-theme-switch button {
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 {{space_md}};
+  border: 0;
+  border-radius: {{radius_badge}};
+  background: transparent;
+  color: {{sidebar_text}};
+  font-family: {{font_stack}};
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.bp-theme-switch button:hover {
+  color: {{ink}};
+}
+.bp-theme-switch button[aria-pressed="true"] {
+  background: {{primary}};
+  color: {{on_primary}};
+  box-shadow: 0 0 16px -4px {{primary_glow}};
+}
+.bp-theme-switch button:focus-visible {
+  outline: 2px solid {{primary}};
+  outline-offset: 2px;
+}
+.bp-theme-icon {
+  font-family: "Material Symbols Rounded";   /* bundled with Streamlit; nothing downloaded */
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  font-feature-settings: "liga";
+}
+
+/* ---- Page header: serif title, one-line introduction, one ink rule ------- */
+.st-key-bp_page_header {
+  border-bottom: 1px solid {{rule}};
+  padding-bottom: {{space_lg}};
+  margin-bottom: {{space_md}};
+}
+.st-key-bp_page_header h1 {
+  padding: 0;
+}
+.bp-description {
+  color: {{ink_secondary}};
+  font-size: {{font_lead}};
+  line-height: {{line_height_body}};
+  margin: {{space_xs}} 0 0 0;
+  max-width: {{measure}};
+}
+
+/* ---- Cards: KPI, general content, charts, empty states ----------------- */
+/* 3D glass over the backdrop, built from shadows only (no gradients, no motion):
+     - an emerald-tinted 1px rim;
+     - light catching the top edge, a darker lower inner edge (the panel's thickness);
+     - a faint turquoise light rising from inside the lower edge;
+     - a tight contact shadow plus a wide soft one, so the panel floats.
+   No hover lift: nothing here is clickable as a whole. */
+div[class*="st-key-bp_kpi_"],
+div[class*="st-key-bp_card_"],
+div[class*="st-key-bp_chart_"],
+div[class*="st-key-bp_empty_"] {
+  background: {{glass}};
+  border: 1px solid {{glass_rim}};
+  border-radius: {{radius_card}};
+  box-shadow:
+    inset 0 1px 0 {{glass_edge}},
+    inset 0 -1px 0 {{glass_shade}},
+    inset 0 -28px 44px -36px {{glass_light}},
+    0 2px 4px -2px {{shadow_contact}},
+    0 22px 44px -26px {{shadow}};
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  backdrop-filter: blur(14px) saturate(130%);
+}
+
+/* Secondary figure strips have no card (each page sets that below), so no depth
+   or blur either. */
+.st-key-bp_dash_activity div[class*="st-key-bp_kpi_"],
+.st-key-bp_cmp_activity div[class*="st-key-bp_kpi_"],
+.st-key-bp_cmp_rates div[class*="st-key-bp_kpi_"],
+.st-key-bp_perf_activity div[class*="st-key-bp_kpi_"],
+.st-key-bp_dq_facts div[class*="st-key-bp_kpi_"],
+.st-key-bp_up_facts div[class*="st-key-bp_kpi_"],
+.st-key-bp_dc_kpis div[class*="st-key-bp_kpi_"] {
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* Phones and "reduce transparency": solid surfaces, no blur (cheaper to draw and
+   the most readable). */
+@media (max-width: 700px), (prefers-reduced-transparency: reduce) {
+  [data-testid="stHeader"],
+  [data-testid="stSidebar"],
+  div[class*="st-key-bp_kpi_"],
+  div[class*="st-key-bp_card_"],
+  div[class*="st-key-bp_chart_"],
+  div[class*="st-key-bp_empty_"] {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  [data-testid="stHeader"] {
+    background: {{canvas}};
+  }
+  [data-testid="stSidebar"] {
+    background: {{sidebar}};
+  }
+  div[class*="st-key-bp_kpi_"],
+  div[class*="st-key-bp_card_"],
+  div[class*="st-key-bp_chart_"],
+  div[class*="st-key-bp_empty_"] {
+    background: {{surface}};
+  }
+  div[class*="st-key-bp_kpi_lead_"] {
+    background: radial-gradient(120% 140% at 0% 0%, {{headline_light}}, transparent 62%), {{surface}};
+  }
+}
+
+div[class*="st-key-bp_kpi_"] {
+  padding: {{space_lg}} {{space_lg}} {{space_md}} {{space_lg}};
+  min-height: 116px;   /* equal heights whether or not a card has a badge or footnote */
+  gap: {{space_xs}};
+}
+/* The headline figure of a page: the design's one headline highlight (a soft
+   turquoise light from the top-left corner), an ink rule along the top and a
+   larger value. */
+div[class*="st-key-bp_kpi_lead_"] {
+  background:
+    radial-gradient(120% 140% at 0% 0%, {{headline_light}}, transparent 62%),
+    {{glass}};
+  border-top: 2px solid {{rule}};
+}
+/* Equal heights in a row when footnotes have different lengths: columns in a row
+   already stretch to the tallest one; the wrapper Streamlit puts around each keyed
+   container doesn't, so let it (and the card inside) fill the column. Checked in
+   the browser with Streamlit 1.67. */
+[data-testid="stLayoutWrapper"]:has(> div[class*="st-key-bp_kpi_"]) {
+  flex: 1 1 auto;
+}
+div[class*="st-key-bp_kpi_"] {
+  height: 100%;
+}
+div[class*="st-key-bp_kpi_"] [data-testid="stMetricLabel"] {
+  color: {{ink_secondary}};
+}
+/* Small uppercase card title, like every other card title in the system. */
+div[class*="st-key-bp_kpi_"] [data-testid="stMetricLabel"] p {
+  font-size: {{font_label}};
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+div[class*="st-key-bp_kpi_"] [data-testid="stMetricValue"] {
+  color: {{ink}};
+  font-weight: {{weight_kpi}};
+  letter-spacing: -0.015em;
+}
+div[class*="st-key-bp_kpi_lead_"] [data-testid="stMetricValue"] {
+  font-size: {{font_kpi_lead}};
+}
+div[class*="st-key-bp_kpi_"] [data-testid="stMetricDelta"] {
+  font-family: {{mono_font_stack}};
+  font-size: {{font_mono}};
+  color: {{ink_secondary}};
+}
+div[class*="st-key-bp_card_"] {
+  padding: {{space_xl}};
+}
+div[class*="st-key-bp_chart_"] {
+  padding: {{space_lg}} {{space_xl}};
+}
+div[class*="st-key-bp_empty_"] {
+  padding: {{space_3xl}} {{space_xl}};
+}
+div[class*="st-key-bp_empty_"] [data-testid="stMarkdownContainer"] {
+  text-align: center;
+}
+
+/* Decorative icons (marked by ui/components.py), never icons inside buttons.
+   Icons written in markdown render as <span role="img"> (checked in the browser).
+   Each sits in a small raised glass tile with an emerald rim. Streamlit sets
+   an inline "display: inline-block" on the icon, which would cancel the
+   centring, hence !important; line-height 1 keeps the glyph vertically centred. */
+[data-testid="stMarkdownContainer"] p:has(> .bp-feature-icon) > span[role="img"] {
+  display: inline-flex !important;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: {{icon}};
+  background: {{surface_subtle}};
+  border: 1px solid {{glass_rim}};
+  border-radius: {{radius_control}};
+  box-shadow: inset 0 1px 0 {{glass_edge}}, inset 0 -10px 16px -12px {{glass_light}};
+}
+div[class*="st-key-bp_empty_"] p:has(> .bp-feature-icon) > span[role="img"] {
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  border-radius: {{radius_card}};
+  box-shadow: inset 0 1px 0 {{glass_edge}}, inset 0 -16px 24px -16px {{glass_light}},
+    0 0 28px -12px {{primary_glow}};
+}
+div[class*="st-key-bp_empty_"] p.bp-empty-message {
+  margin-left: auto;
+  margin-right: auto;
+}
+.bp-empty-title {
+  color: {{ink}};
+  font-family: {{heading_font_stack}};
+  font-size: {{font_section}};
+  font-weight: {{weight_heading}};
+  margin: {{space_sm}} 0 {{space_xs}} 0;
+}
+.bp-empty-message {
+  color: {{ink_secondary}};
+  max-width: 520px;
+  margin: 0 auto;
+}
+.bp-card-title {
+  color: {{ink}};
+  font-size: {{font_card_title}};
+  font-weight: 600;
+  margin: 0;
+}
+.bp-card-text {
+  color: {{ink_secondary}};
+  font-size: 14px;
+  line-height: {{line_height_body}};
+  margin: 2px 0 0 0;
+}
+.bp-card-title.bp-mono-title {
+  font-family: {{mono_font_stack}};
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+/* Small uppercase title at the top of a card. */
+p.bp-card-label {
+  color: {{ink_muted}};
+  font-size: {{font_label}};
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 {{space_sm}} 0;
+}
+
+/* ---- List rows: icon tile, title + one line, chevron action --------------- */
+/* Rows sit inside a card and are separated by hairlines; no hover lift. The
+   three parts stay side by side on phones (Streamlit would stack the columns). */
+div[class*="st-key-bp_row_"] {
+  border-top: 1px solid {{border}};
+  padding: {{space_sm}} 0;
+}
+div[class*="st-key-bp_row_"] [data-testid="stHorizontalBlock"] {
+  flex-wrap: nowrap;
+  gap: {{space_md}};
+}
+div[class*="st-key-bp_row_"] [data-testid="stColumn"] {
+  min-width: 0 !important;
+}
+div[class*="st-key-bp_row_"] [data-testid="stColumn"]:first-child {
+  flex: 0 0 40px !important;
+  width: 40px !important;
+}
+div[class*="st-key-bp_row_"] [data-testid="stColumn"]:last-child {
+  flex: 0 0 auto !important;
+  width: auto !important;
+}
+div[class*="st-key-bp_row_"] [data-testid="stColumn"]:nth-child(2) {
+  flex: 1 1 auto !important;
+  width: auto !important;
+}
+p.bp-row-title {
+  color: {{ink}};
+  font-weight: 600;
+  margin: 0;
+}
+p.bp-row-text {
+  color: {{ink_secondary}};
+  font-size: {{font_caption}};
+  line-height: {{line_height_body}};
+  margin: 2px 0 0 0;
+  overflow-wrap: anywhere;
+}
+/* ---- Home ---------------------------------------------------------------- */
+.bp-home-label {
+  color: {{ink_muted}};
+  font-size: {{font_label}};
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 {{space_xs}} 0;
+}
+.bp-home-file {
+  color: {{ink}};
+  font-size: {{font_lead}};
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+p.bp-home-meta {
+  color: {{ink_muted}};
+  font-size: {{font_caption}};
+  margin: {{space_sm}} 0 0 0;
+}
+/* Four step cards of equal height; the step number sits in the top-right corner. */
+.st-key-bp_home_steps [data-testid="stColumn"] > [data-testid="stVerticalBlock"],
+.st-key-bp_home_steps div[class*="st-key-bp_card_home_step_"] {
+  height: 100%;
+}
+.st-key-bp_home_steps div[class*="st-key-bp_card_home_step_"] {
+  position: relative;
+}
+.st-key-bp_home_steps [data-testid="stElementContainer"]:has(p.bp-step-number) {
+  position: absolute;
+  top: {{space_lg}};
+  right: {{space_lg}};
+  width: auto;
+}
+.st-key-bp_home_steps p.bp-step-number {
+  margin: 0;
+  color: {{accent_text}};
+  font-family: {{mono_font_stack}};
+  font-size: {{font_mono}};
+}
+/* Promise line under the steps. */
+.st-key-bp_home_promises {
+  padding: {{space_sm}} 0 {{space_xl}} 0;
+}
+
+/* Smaller numbers and technical details (row counts, file names, timestamps). */
+.bp-mono {
+  font-family: {{mono_font_stack}};
+  font-size: {{font_mono}};
+  font-feature-settings: normal;
+}
+
+/* ---- Filter bar --------------------------------------------------------- */
+/* A recessed glass strip: same rim as the cards, shaded at the top instead of lit. */
+.st-key-bp_filter_bar {
+  background: {{surface_subtle}};
+  border: 1px solid {{glass_rim}};
+  border-radius: {{radius_card}};
+  box-shadow: inset 0 1px 2px {{glass_shade}}, inset 0 -1px 0 {{glass_edge}};
+  padding: {{space_md}} {{space_lg}};
+}
+
+/* ---- Dashboard ----------------------------------------------------------- */
+/* Each Dashboard block measures its own width (container queries), so the layout
+   adapts to the space left by the sidebar, not just the screen width. These
+   wrappers exist only on the Dashboard (bp_dash_*) and Comparisons (bp_cmp_*),
+   so other pages are unaffected. */
+.st-key-bp_dash_filters,
+.st-key-bp_dash_kpis,
+.st-key-bp_dash_activity,
+.st-key-bp_dash_breakdowns,
+.st-key-bp_dash_sources,
+.st-key-bp_cmp_filters,
+.st-key-bp_cmp_kpis,
+.st-key-bp_cmp_activity,
+.st-key-bp_cmp_rates,
+.st-key-bp_perf_filters,
+.st-key-bp_perf_kpis,
+.st-key-bp_perf_activity,
+.st-key-bp_ano_filters,
+.st-key-bp_ins_filters,
+.st-key-bp_rep_filters {
+  container-type: inline-size;
+}
+/* Filters: wrap onto more lines instead of squeezing the date range. */
+@container (max-width: 860px) {
+  .st-key-bp_dash_filters [data-testid="stHorizontalBlock"],
+  .st-key-bp_cmp_filters [data-testid="stHorizontalBlock"],
+  .st-key-bp_perf_filters [data-testid="stHorizontalBlock"],
+  .st-key-bp_ano_filters [data-testid="stHorizontalBlock"],
+  .st-key-bp_ins_filters [data-testid="stHorizontalBlock"],
+  .st-key-bp_rep_filters [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+    row-gap: {{space_md}};
+  }
+  .st-key-bp_dash_filters [data-testid="stColumn"],
+  .st-key-bp_cmp_filters [data-testid="stColumn"],
+  .st-key-bp_perf_filters [data-testid="stColumn"],
+  .st-key-bp_ano_filters [data-testid="stColumn"],
+  .st-key-bp_ins_filters [data-testid="stColumn"],
+  .st-key-bp_rep_filters [data-testid="stColumn"] {
+    flex: 1 1 200px !important;
+    min-width: min(200px, 100%) !important;
+    width: auto !important;
+  }
+  .st-key-bp_dash_filters [data-testid="stColumn"]:first-child,
+  .st-key-bp_cmp_filters [data-testid="stColumn"]:first-child,
+  .st-key-bp_perf_filters [data-testid="stColumn"]:first-child,
+  .st-key-bp_ano_filters [data-testid="stColumn"]:first-child,
+  .st-key-bp_ins_filters [data-testid="stColumn"]:first-child,
+  .st-key-bp_rep_filters [data-testid="stColumn"]:first-child {
+    flex-basis: 260px !important;
+  }
+  .st-key-bp_dash_filters [data-testid="stColumn"]:last-child,
+  .st-key-bp_cmp_filters [data-testid="stColumn"]:last-child,
+  .st-key-bp_perf_filters [data-testid="stColumn"]:last-child,
+  .st-key-bp_ano_filters [data-testid="stColumn"]:last-child,
+  .st-key-bp_ins_filters [data-testid="stColumn"]:last-child,
+  .st-key-bp_rep_filters [data-testid="stColumn"]:last-child {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+  }
+}
+/* The reset button always shows its full label. */
+.st-key-bp_dash_filters [data-testid="stBaseButton-tertiary"] p,
+.st-key-bp_cmp_filters [data-testid="stBaseButton-tertiary"] p,
+.st-key-bp_perf_filters [data-testid="stBaseButton-tertiary"] p,
+.st-key-bp_ano_filters [data-testid="stBaseButton-tertiary"] p,
+.st-key-bp_ins_filters [data-testid="stBaseButton-tertiary"] p {
+  white-space: nowrap;
+}
+
+/* KPI rows: 4 across, 2 across on tablets, 1 across (financial) on phones. */
+@container (max-width: 760px) {
+  .st-key-bp_dash_kpis [data-testid="stHorizontalBlock"],
+  .st-key-bp_dash_activity [data-testid="stHorizontalBlock"],
+  .st-key-bp_dash_breakdowns [data-testid="stHorizontalBlock"],
+  .st-key-bp_dash_sources [data-testid="stHorizontalBlock"],
+  .st-key-bp_cmp_kpis [data-testid="stHorizontalBlock"],
+  .st-key-bp_cmp_activity [data-testid="stHorizontalBlock"],
+  .st-key-bp_cmp_rates [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_dash_kpis [data-testid="stColumn"],
+  .st-key-bp_dash_activity [data-testid="stColumn"],
+  .st-key-bp_cmp_kpis [data-testid="stColumn"],
+  .st-key-bp_cmp_activity [data-testid="stColumn"],
+  .st-key-bp_cmp_rates [data-testid="stColumn"] {
+    flex: 1 1 calc(50% - {{space_sm}}) !important;
+    min-width: calc(50% - {{space_sm}}) !important;
+    width: auto !important;
+  }
+  /* Two charts side by side get too narrow to read: stack them. */
+  .st-key-bp_dash_breakdowns [data-testid="stColumn"],
+  .st-key-bp_dash_sources [data-testid="stColumn"] {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+    width: auto !important;
+  }
+}
+@container (max-width: 440px) {
+  .st-key-bp_dash_kpis [data-testid="stColumn"],
+  .st-key-bp_cmp_kpis [data-testid="stColumn"] {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+}
+/* Empty state: on narrow screens drop the spacer columns so both buttons keep
+   their full labels (stacking when there is no room side by side). */
+.st-key-bp_empty_dashboard {
+  container-type: inline-size;
+}
+@container (max-width: 760px) {
+  .st-key-bp_empty_dashboard [data-testid="stColumn"]:not(:has([data-testid="stButton"])) {
+    display: none;
+  }
+  .st-key-bp_empty_dashboard [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_empty_dashboard [data-testid="stColumn"] {
+    flex: 1 1 200px !important;
+    min-width: min(200px, 100%) !important;
+    width: auto !important;
+  }
+}
+/* Long figures wrap rather than being cut off with an ellipsis. */
+.st-key-bp_dash_kpis [data-testid="stMetricValue"] > div,
+.st-key-bp_dash_activity [data-testid="stMetricValue"] > div,
+.st-key-bp_dash_kpis [data-testid="stMetricLabel"] p,
+.st-key-bp_dash_activity [data-testid="stMetricLabel"] p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+/* Sales activity: secondary figures, so no card, just a hairline above each. */
+.bp-dash-label {
+  color: {{ink_muted}};
+  font-size: {{font_label}};
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: {{space_md}} 0 0 0;
+}
+.st-key-bp_dash_activity div[class*="st-key-bp_kpi_"] {
+  background: transparent;
+  border: none;
+  border-top: 1px solid {{border}};
+  border-radius: 0;
+  min-height: 0;
+  padding: {{space_md}} 0 0 0;
+}
+.st-key-bp_dash_activity [data-testid="stMetricValue"] {
+  font-size: {{font_kpi_compact}};
+}
+/* File names: mono, and wrap only where file_name_html() allows (after _ - .). */
+.st-key-bp_dash_sources p.bp-source-file {
+  color: {{ink}};
+  font-family: {{mono_font_stack}};
+  font-size: {{font_mono}};
+  overflow-wrap: break-word;
+  margin: {{space_xs}} 0;
+}
+
+/* ---- Buttons ------------------------------------------------------------- */
+/* Primary: the one solid action per view, a lit turquoise key with a soft glow.
+   Hover deepens the colour and the glow; nothing moves. */
+[data-testid="stBaseButton-primary"] {
+  background: {{primary}};
+  border: 1px solid {{primary}};
+  color: {{on_primary}};
+  font-weight: 500;
+  box-shadow: inset 0 1px 0 {{glass_edge}}, inset 0 -2px 0 {{glass_shade}},
+    0 8px 20px -10px {{primary_glow}};
+}
+[data-testid="stBaseButton-primary"]:hover {
+  background: {{primary_hover}};
+  border-color: {{primary_hover}};
+  color: {{on_primary}};
+  box-shadow: inset 0 1px 0 {{glass_edge}}, inset 0 -2px 0 {{glass_shade}},
+    0 10px 26px -10px {{primary_glow}};
+}
+[data-testid="stBaseButton-primary"]:focus-visible,
+[data-testid="stBaseButton-secondary"]:focus-visible {
+  outline: 2px solid {{primary}};
+  outline-offset: 2px;
+}
+/* Secondary: a small glass key with an emerald rim. */
+[data-testid="stBaseButton-secondary"] {
+  background: {{glass}};
+  border-color: {{glass_rim}};
+  font-weight: 500;
+  box-shadow: inset 0 1px 0 {{glass_edge}}, inset 0 -1px 0 {{glass_shade}},
+    0 2px 4px -2px {{shadow_contact}};
+}
+[data-testid="stBaseButton-secondary"]:hover {
+  border-color: {{ink_secondary}};
+  color: {{ink}};
+}
+
+/* ---- Badges -------------------------------------------------------------- */
+/* Status chips (status_badge): pills with a fine ring in their own colour, so
+   they read as chips on glass. Icon and label always come with the colour. */
+[data-testid="stMarkdownBadge"] {
+  border-radius: {{radius_badge}};
+  padding: 2px {{space_sm}};
+  font-weight: 500;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, currentColor 28%, transparent);
+}
+
+/* ---- Upload drop zone ---------------------------------------------------- */
+[data-testid="stFileUploaderDropzone"] {
+  background: {{surface}};
+  border: 1px dashed {{ink_muted}};
+  border-radius: {{radius_card}};
+}
+[data-testid="stFileUploaderDropzone"]:hover {
+  border-color: {{primary}};
+}
+
+/* ---- Tables, expanders, alerts ------------------------------------------ */
+/* Tables: a framed pane with the emerald rim and a soft contact shadow. */
+[data-testid="stDataFrame"] {
+  border-radius: {{radius_control}};
+  overflow: hidden;
+  box-shadow: 0 0 0 1px {{glass_rim}}, 0 2px 4px -2px {{shadow_contact}},
+    0 14px 30px -22px {{shadow}};
+}
+/* Expanders (notes panel, details): glass panels like the cards, without blur. */
+[data-testid="stExpander"] details {
+  background: {{glass}};
+  border-color: {{glass_rim}};
+  border-radius: {{radius_card}};
+  box-shadow: inset 0 1px 0 {{glass_edge}}, 0 2px 4px -2px {{shadow_contact}},
+    0 18px 36px -26px {{shadow}};
+}
+[data-testid="stAlert"] {
+  border-radius: {{radius_control}};
+}
+[data-testid="stAlertContainer"] {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, currentColor 16%, transparent);
+}
+
+/* ---- Charts: theme-aware text ------------------------------------------- */
+/* Plotly writes fixed text colours; recolour them for the active theme.
+   The tooltip (.hoverlayer) keeps its own colours: it is ink in both themes. */
+[data-testid="stPlotlyChart"] svg text:not(.hoverlayer *) {
+  fill: {{chart_text}} !important;
+}
+
+/* ---- Comparisons --------------------------------------------------------- */
+/* Shares the Dashboard's filter and KPI-row rules above; these keys exist only on
+   the Comparisons page. */
+.st-key-bp_cmp_kpis [data-testid="stMetric"] [data-testid="stMetricValue"] > div,
+.st-key-bp_cmp_kpis [data-testid="stMetric"] [data-testid="stMetricLabel"] p,
+.st-key-bp_cmp_activity [data-testid="stMetric"] [data-testid="stMetricValue"] > div,
+.st-key-bp_cmp_activity [data-testid="stMetric"] [data-testid="stMetricLabel"] p,
+.st-key-bp_cmp_rates [data-testid="stMetric"] [data-testid="stMetricValue"] > div,
+.st-key-bp_cmp_rates [data-testid="stMetric"] [data-testid="stMetricLabel"] p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+/* Sales activity and returns: secondary, so no card, just a hairline above each. */
+.st-key-bp_cmp_activity div[class*="st-key-bp_kpi_"],
+.st-key-bp_cmp_rates div[class*="st-key-bp_kpi_"] {
+  background: transparent;
+  border: none;
+  border-top: 1px solid {{border}};
+  border-radius: 0;
+  min-height: 0;
+  padding: {{space_md}} 0 0 0;
+}
+.st-key-bp_cmp_activity [data-testid="stMetric"] [data-testid="stMetricValue"],
+.st-key-bp_cmp_rates [data-testid="stMetric"] [data-testid="stMetricValue"] {
+  font-size: {{font_kpi_compact}};
+}
+/* The headline sentence: the one change to read first. Ink rule on the left. */
+.st-key-bp_cmp_headline {
+  border-left: 2px solid {{ink}};
+  padding-left: {{space_md}};
+}
+.st-key-bp_cmp_headline p {
+  font-size: {{font_lead}};
+}
+/* Controls and the two period cards: one per row once space runs short. */
+.st-key-bp_card_cmp_controls,
+.st-key-bp_cmp_periods {
+  container-type: inline-size;
+}
+@container (max-width: 560px) {
+  .st-key-bp_card_cmp_controls [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_card_cmp_controls [data-testid="stColumn"] {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+    width: auto !important;
+  }
+}
+/* The two period cards stay side by side on tablets; they stack on phones. */
+@container (max-width: 440px) {
+  .st-key-bp_cmp_periods [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_cmp_periods [data-testid="stColumn"] {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+    width: auto !important;
+  }
+}
+
+/* ---- Performance --------------------------------------------------------- */
+/* Keys exist only on the Performance page; same container-query pattern as the
+   Dashboard. Headline: 3 figures, revenue leads; sales activity: 3 quiet figures. */
+.st-key-bp_perf_trend_head,
+div[class*="st-key-bp_perf_rankhead_"],
+div[class*="st-key-bp_perf_rank_"] {
+  container-type: inline-size;
+}
+@container (max-width: 640px) {
+  .st-key-bp_perf_kpis [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_perf_kpis [data-testid="stColumn"] {
+    flex: 1 1 calc(50% - {{space_sm}}) !important;
+    min-width: calc(50% - {{space_sm}}) !important;
+    width: auto !important;
+  }
+  /* The headline figure keeps a full row; profit and margin share the next. */
+  .st-key-bp_perf_kpis [data-testid="stColumn"]:first-child {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+}
+@container (max-width: 440px) {
+  .st-key-bp_perf_kpis [data-testid="stColumn"] {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+  .st-key-bp_perf_activity [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_perf_activity [data-testid="stColumn"] {
+    flex: 1 1 calc(50% - {{space_sm}}) !important;
+    min-width: calc(50% - {{space_sm}}) !important;
+    width: auto !important;
+  }
+}
+.st-key-bp_perf_kpis [data-testid="stMetric"] [data-testid="stMetricValue"] > div,
+.st-key-bp_perf_kpis [data-testid="stMetric"] [data-testid="stMetricLabel"] p,
+.st-key-bp_perf_activity [data-testid="stMetric"] [data-testid="stMetricValue"] > div,
+.st-key-bp_perf_activity [data-testid="stMetric"] [data-testid="stMetricLabel"] p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+/* Sales activity is secondary: no card, just a hairline above each figure. */
+.st-key-bp_perf_activity div[class*="st-key-bp_kpi_"] {
+  background: transparent;
+  border: none;
+  border-top: 1px solid {{border}};
+  border-radius: 0;
+  min-height: 0;
+  padding: {{space_md}} 0 0 0;
+}
+.st-key-bp_perf_activity [data-testid="stMetric"] [data-testid="stMetricValue"] {
+  font-size: {{font_kpi_compact}};
+}
+/* Card heads (title + selector) and the top/bottom lists: one per row when narrow. */
+@container (max-width: 560px) {
+  .st-key-bp_perf_trend_head [data-testid="stHorizontalBlock"],
+  div[class*="st-key-bp_perf_rankhead_"] [data-testid="stHorizontalBlock"],
+  div[class*="st-key-bp_perf_rank_"] [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_perf_trend_head [data-testid="stColumn"],
+  div[class*="st-key-bp_perf_rankhead_"] [data-testid="stColumn"],
+  div[class*="st-key-bp_perf_rank_"] [data-testid="stColumn"] {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+    width: auto !important;
+  }
+}
+
+/* ---- Anomalies ----------------------------------------------------------- */
+/* Keys exist only on the Anomalies page. Summary: the count leads; findings are
+   rows with a hairline above (no card each), like the Dashboard's activity strip. */
+.st-key-bp_ano_kpis {
+  container-type: inline-size;
+}
+@container (max-width: 640px) {
+  .st-key-bp_ano_kpis [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_ano_kpis [data-testid="stColumn"] {
+    flex: 1 1 calc(50% - {{space_sm}}) !important;
+    min-width: calc(50% - {{space_sm}}) !important;
+    width: auto !important;
+  }
+  .st-key-bp_ano_kpis [data-testid="stColumn"]:first-child {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+}
+@container (max-width: 400px) {
+  .st-key-bp_ano_kpis [data-testid="stColumn"] {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+}
+.st-key-bp_ano_kpis [data-testid="stMetric"] [data-testid="stMetricLabel"] p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+/* "What to do next": the one piece of guidance, ink rule on the left. */
+.st-key-bp_ano_next {
+  border-left: 2px solid {{ink}};
+  padding-left: {{space_md}};
+}
+/* Each anomaly is its own glass card (ui.card). */
+div[class*="st-key-bp_card_anomaly_"] p {
+  overflow-wrap: break-word;
+}
+
+/* ---- Insights ------------------------------------------------------------ */
+/* Keys exist only on the Insights page. Summary: the count leads; each finding is a
+   glass card (ui.card): headline and figures on the left, the suggested next step
+   on the right, stacked when the card is narrow. */
+.st-key-bp_ins_kpis,
+div[class*="st-key-bp_card_insight_"] {
+  container-type: inline-size;
+}
+@container (max-width: 640px) {
+  .st-key-bp_ins_kpis [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_ins_kpis [data-testid="stColumn"] {
+    flex: 1 1 calc(50% - {{space_sm}}) !important;
+    min-width: calc(50% - {{space_sm}}) !important;
+    width: auto !important;
+  }
+  .st-key-bp_ins_kpis [data-testid="stColumn"]:first-child {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+}
+@container (max-width: 400px) {
+  .st-key-bp_ins_kpis [data-testid="stColumn"] {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+}
+.st-key-bp_ins_kpis [data-testid="stMetric"] [data-testid="stMetricLabel"] p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+/* "Where to start": the one piece of reading guidance, ink rule on the left. */
+.st-key-bp_ins_start {
+  border-left: 2px solid {{ink}};
+  padding-left: {{space_md}};
+}
+div[class*="st-key-bp_card_insight_"] p,
+div[class*="st-key-bp_card_insight_"] li {
+  overflow-wrap: break-word;
+}
+/* The figures are supporting detail: quieter than the headline. */
+div[class*="st-key-bp_card_insight_"] li {
+  color: {{ink_secondary}};
+  font-size: 14px;
+  line-height: {{line_height_body}};
+}
+.bp-ins-label {
+  color: {{ink_muted}};
+  font-size: {{font_label}};
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: {{space_sm}} 0 0 0;
+}
+/* The suggested next step: the action, marked with a rule in the action colour. */
+div[class*="st-key-bp_ins_step_"] {
+  border-left: 2px solid {{primary}};
+  padding-left: {{space_md}};
+}
+@container (max-width: 620px) {
+  div[class*="st-key-bp_card_insight_"] [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+    row-gap: {{space_sm}};
+  }
+  div[class*="st-key-bp_card_insight_"] [data-testid="stColumn"] {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+    width: auto !important;
+  }
+}
+
+/* ---- Data quality -------------------------------------------------------- */
+/* Same container-query pattern as the Dashboard; these keys exist only on the
+   Data Quality page. Headline: score + 2 action figures; facts: 4 quiet figures. */
+.st-key-bp_dq_kpis,
+.st-key-bp_dq_facts,
+.st-key-bp_up_facts {
+  container-type: inline-size;
+}
+@container (max-width: 760px) {
+  .st-key-bp_dq_kpis [data-testid="stHorizontalBlock"],
+  .st-key-bp_dq_facts [data-testid="stHorizontalBlock"],
+  .st-key-bp_up_facts [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_dq_kpis [data-testid="stColumn"],
+  .st-key-bp_dq_facts [data-testid="stColumn"],
+  .st-key-bp_up_facts [data-testid="stColumn"] {
+    flex: 1 1 calc(50% - {{space_sm}}) !important;
+    min-width: calc(50% - {{space_sm}}) !important;
+    width: auto !important;
+  }
+  /* The score keeps a full row; the two action figures share the next one. */
+  .st-key-bp_dq_kpis [data-testid="stColumn"]:first-child {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+}
+@container (max-width: 440px) {
+  .st-key-bp_dq_kpis [data-testid="stColumn"] {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+}
+.st-key-bp_dq_kpis [data-testid="stMetricValue"] > div,
+.st-key-bp_dq_kpis [data-testid="stMetricLabel"] p,
+.st-key-bp_dq_facts [data-testid="stMetricLabel"] p,
+.st-key-bp_up_facts [data-testid="stMetricLabel"] p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+/* File facts are secondary: no card, just a hairline above each (Data Quality
+   and Upload). */
+.st-key-bp_dq_facts div[class*="st-key-bp_kpi_"],
+.st-key-bp_up_facts div[class*="st-key-bp_kpi_"] {
+  background: transparent;
+  border: none;
+  border-top: 1px solid {{border}};
+  border-radius: 0;
+  min-height: 0;
+  padding: {{space_md}} 0 0 0;
+}
+.st-key-bp_dq_facts [data-testid="stMetricValue"],
+.st-key-bp_up_facts [data-testid="stMetricValue"] {
+  font-size: {{font_kpi_compact}};
+}
+
+/* ---- Data cleaning ------------------------------------------------------- */
+/* Keys exist only on the Data Cleaning page. The five working-copy figures are
+   facts, not headline KPIs: no cards, a hairline above each, compact values. */
+.st-key-bp_dc_kpis,
+.st-key-bp_dc_review_facts,
+.st-key-bp_dc_actions,
+.st-key-bp_dc_apply {
+  container-type: inline-size;
+}
+.st-key-bp_dc_kpis div[class*="st-key-bp_kpi_"] {
+  background: transparent;
+  border: none;
+  border-top: 1px solid {{border}};
+  border-radius: 0;
+  min-height: 0;
+  padding: {{space_md}} 0 0 0;
+}
+/* [data-testid="stMetric"] raises specificity above Streamlit's own metric styles. */
+.st-key-bp_dc_kpis [data-testid="stMetric"] [data-testid="stMetricValue"],
+.st-key-bp_dc_review_facts [data-testid="stMetric"] [data-testid="stMetricValue"] {
+  font-size: {{font_kpi_compact}};
+}
+.st-key-bp_dc_kpis [data-testid="stMetric"] [data-testid="stMetricLabel"] p,
+.st-key-bp_dc_review_facts [data-testid="stMetric"] [data-testid="stMetricLabel"] p,
+.st-key-bp_dc_review_facts [data-testid="stMetric"] [data-testid="stMetricValue"] > div {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+@container (max-width: 700px) {
+  .st-key-bp_dc_kpis [data-testid="stHorizontalBlock"],
+  .st-key-bp_dc_review_facts [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_dc_kpis [data-testid="stColumn"] {
+    flex: 1 1 calc(33% - {{space_sm}}) !important;
+    min-width: calc(33% - {{space_sm}}) !important;
+    width: auto !important;
+  }
+  /* Operation names can be long: give them a full row. */
+  .st-key-bp_dc_review_facts [data-testid="stColumn"] {
+    flex: 1 1 calc(50% - {{space_sm}}) !important;
+    min-width: calc(50% - {{space_sm}}) !important;
+    width: auto !important;
+  }
+  .st-key-bp_dc_review_facts [data-testid="stColumn"]:first-child {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+}
+@container (max-width: 440px) {
+  .st-key-bp_dc_kpis [data-testid="stColumn"] {
+    flex-basis: calc(50% - {{space_sm}}) !important;
+    min-width: calc(50% - {{space_sm}}) !important;
+  }
+}
+/* Buttons: the main action keeps a full row once space runs short. */
+@container (max-width: 600px) {
+  .st-key-bp_dc_actions [data-testid="stHorizontalBlock"],
+  .st-key-bp_dc_apply [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap;
+  }
+  .st-key-bp_dc_actions [data-testid="stColumn"],
+  .st-key-bp_dc_apply [data-testid="stColumn"] {
+    flex: 1 1 calc(50% - {{space_sm}}) !important;
+    min-width: calc(50% - {{space_sm}}) !important;
+    width: auto !important;
+  }
+  .st-key-bp_dc_actions [data-testid="stColumn"]:first-child {
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+  }
+  .st-key-bp_dc_apply [data-testid="stColumn"]:last-child {
+    display: none;
+  }
+}
+
+/* ---- Responsive shell ---------------------------------------------------- */
+/* Tablet: a slimmer sidebar leaves the content enough room. max-width wins over
+   the width Streamlit sets inline, and the viewer can still collapse it. */
+@media (max-width: 1024px) {
+  [data-testid="stSidebar"] {
+    max-width: 232px;
+  }
+  [data-testid="stMainBlockContainer"] {
+    padding-left: {{space_xl}};
+    padding-right: {{space_xl}};
+  }
+}
+/* Phone: the sidebar becomes an overlay (Streamlit), the column uses the full
+   width with 16px gutters, and the title starts closer to the top bar. */
+@media (max-width: 640px) {
+  [data-testid="stSidebar"] {
+    max-width: none;
+  }
+  [data-testid="stMainBlockContainer"] {
+    padding-top: calc({{space_4xl}} + {{space_sm}});
+    padding-left: {{space_lg}};
+    padding-right: {{space_lg}};
+  }
+  /* Columns stack on phones; gap="large" would leave 64px between the stacked
+     cards. Only the vertical gap changes, side-by-side spacing stays. */
+  [data-testid="stMainBlockContainer"] [data-testid="stHorizontalBlock"] {
+    row-gap: {{space_lg}};
+  }
+}
+
+/* ---- Motion: respect the viewer's preference ---------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  [data-testid="stBaseButton-primary"],
+  [data-testid="stBaseButton-secondary"],
+  [data-testid="stSidebarNavLink"] {
+    transition: none;
+  }
+}

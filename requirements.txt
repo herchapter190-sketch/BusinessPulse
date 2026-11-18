@@ -1,0 +1,15 @@
+# BusinessPulse dependencies
+# Exact versions installed and tested with Python 3.15.2 (Windows, 64-bit).
+# Install inside the project's virtual environment:
+#   .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+streamlit==1.67.0
+pandas==3.1.1
+plotly==7.1.0
+openpyxl==3.1.5
+reportlab==5.1.0
+
+# Development / testing only
+pytest==9.2.0
+# Used only by tools/browser_check.py (screenshots); Streamlit already installs it.
+websockets==17.4

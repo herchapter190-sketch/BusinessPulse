@@ -1,0 +1,340 @@
+messy_row_number,order_id,column,issue_type,detail,original_value,messy_value
+12,ORD-100012,order_date,inconsistent_date_format,DD/MM/YYYY,2025-01-01,01/01/2025
+16,ORD-100016,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-01-02,02-Jan-2025
+20,ORD-100020,customer_id,missing_value,blank cell,CUST-0236,
+87,ORD-100087,order_date,missing_value,blank cell,2025-01-08,
+89,ORD-100089,order_date,missing_value,blank cell,2025-01-08,
+106,ORD-100106,order_date,future_date,date after the data period,2025-01-09,2027-01-09
+119,ORD-100114,(entire row),exact_duplicate,identical copy of another row,,
+312,ORD-100311,order_date,inconsistent_date_format,YYYY/MM/DD,2025-01-29,2025/01/29
+323,ORD-100322,region,extra_whitespace,leading/trailing spaces,Central,Central   
+340,ORD-100339,quantity,invalid_number,zero quantity,2,0
+345,ORD-100344,order_date,inconsistent_date_format,DD/MM/YYYY,2025-02-01,01/02/2025
+400,ORD-100399,order_status,unknown_status,status not in the allowed list,Completed,TBD
+470,ORD-100469,payment_method,inconsistent_capitalization,case changed,Debit Card,DEBIT CARD
+472,ORD-100471,unit_price,invalid_number,text instead of a number,8.49,TBD
+520,ORD-100514,(entire row),exact_duplicate,identical copy of another row,,
+550,ORD-100548,order_date,inconsistent_date_format,DD/MM/YYYY,2025-02-19,19/02/2025
+554,ORD-100552,order_status,unknown_status,status not in the allowed list,Completed,???
+644,ORD-100642,product_name,extra_whitespace,leading/trailing spaces,Gel Pen Pack,Gel Pen Pack   
+697,ORD-100695,unit_price,invalid_number,currency symbol in number,14.50,$14.50
+714,ORD-100712,quantity,invalid_number,negative quantity,1,-1
+718,ORD-100716,order_date,inconsistent_date_format,DD/MM/YYYY,2025-03-06,06/03/2025
+730,ORD-100728,quantity,invalid_number,negative quantity,1,-1
+747,ORD-100745,payment_method,inconsistent_capitalization,case changed,Bank Transfer,BANK TRANSFER
+754,ORD-100752,order_status,inconsistent_capitalization,case changed,Completed,completed
+769,ORD-100767,order_status,inconsistent_capitalization,case changed,Completed,completed
+772,ORD-100770,payment_method,missing_value,blank cell,Bank Transfer,
+781,ORD-100779,order_date,inconsistent_date_format,YYYY/MM/DD,2025-03-10,2025/03/10
+801,ORD-100799,order_date,inconsistent_date_format,DD/MM/YYYY,2025-03-11,11/03/2025
+824,ORD-100822,category,incorrect_category,misspelled or non-standard name,Electronics,Electronic
+831,ORD-100829,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+890,ORD-100888,order_date,inconsistent_date_format,YYYY/MM/DD,2025-03-19,2025/03/19
+903,ORD-100901,order_date,inconsistent_date_format,DD/MM/YYYY,2025-03-20,20/03/2025
+933,ORD-100925,(entire row),exact_duplicate,identical copy of another row,,
+938,ORD-100935,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-03-23,23-Mar-2025
+957,ORD-100954,customer_id,missing_value,blank cell,CUST-0374,
+975,ORD-100972,quantity,missing_value,blank cell,2,
+1017,ORD-101014,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+1033,ORD-101026,(entire row),exact_duplicate,identical copy of another row,,
+1041,ORD-101037,order_date,inconsistent_date_format,YYYY/MM/DD,2025-03-31,2025/03/31
+1090,ORD-101086,order_date,inconsistent_date_format,DD/MM/YYYY,2025-04-03,03/04/2025
+1091,ORD-101087,category,extra_whitespace,leading/trailing spaces,Beauty & Personal Care, Beauty & Personal Care 
+1092,ORD-101088,region,inconsistent_capitalization,case changed,South,south
+1120,ORD-101116,region,inconsistent_capitalization,case changed,East,EAST
+1140,ORD-101136,order_date,inconsistent_date_format,DD/MM/YYYY,2025-04-06,06/04/2025
+1199,ORD-101195,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-04-10,10-Apr-2025
+1219,ORD-101215,product_name,extra_whitespace,leading/trailing spaces,Yoga Mat, Yoga Mat 
+1262,ORD-101258,category,extra_whitespace,leading/trailing spaces,Beauty & Personal Care,  Beauty & Personal Care
+1287,ORD-101283,order_date,inconsistent_date_format,DD/MM/YYYY,2025-04-17,17/04/2025
+1300,ORD-101296,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+1308,ORD-101304,category,incorrect_category,misspelled or non-standard name,Office Supplies,Office Suplies
+1394,ORD-101390,payment_method,inconsistent_capitalization,case changed,Digital Wallet,digital wallet
+1407,ORD-101403,region,missing_value,blank cell,Central,
+1409,ORD-105483,order_id,duplicate_order_id,order ID reused by a different order,ORD-101405,ORD-105483
+1429,ORD-101425,region,extra_whitespace,leading/trailing spaces,Central,Central   
+1451,ORD-101441,(entire row),exact_duplicate,identical copy of another row,,
+1461,ORD-101456,order_date,inconsistent_date_format,YYYY/MM/DD,2025-04-30,2025/04/30
+1545,ORD-101540,order_date,inconsistent_date_format,DD/MM/YYYY,2025-05-06,06/05/2025
+1611,ORD-101606,order_date,inconsistent_date_format,YYYY/MM/DD,2025-05-10,2025/05/10
+1655,ORD-101650,customer_id,missing_value,blank cell,CUST-0236,
+1668,ORD-101663,payment_method,missing_value,blank cell,Digital Wallet,
+1674,ORD-101669,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-05-14,14-May-2025
+1748,ORD-101743,payment_method,missing_value,blank cell,Credit Card,
+1754,ORD-101749,quantity,missing_value,blank cell,3,
+1813,ORD-101808,region,inconsistent_capitalization,case changed,North,NORTH
+1871,ORD-101866,quantity,implausible_value,unrealistically large quantity,4,500
+1872,ORD-101867,payment_method,inconsistent_capitalization,case changed,Credit Card,credit card
+1883,ORD-101878,order_date,missing_value,blank cell,2025-06-01,
+1900,ORD-101895,order_date,inconsistent_date_format,YYYY/MM/DD,2025-06-02,2025/06/02
+1932,ORD-101927,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-06-04,04-Jun-2025
+1962,ORD-101957,order_date,inconsistent_date_format,YYYY/MM/DD,2025-06-06,2025/06/06
+1973,ORD-101968,order_date,inconsistent_date_format,DD/MM/YYYY,2025-06-07,07/06/2025
+1988,ORD-101983,product_name,extra_whitespace,leading/trailing spaces,Natural Lip Balm Set,  Natural Lip Balm Set
+2037,ORD-102032,customer_id,missing_value,blank cell,CUST-0295,
+2046,ORD-102041,order_date,inconsistent_date_format,YYYY/MM/DD,2025-06-12,2025/06/12
+2057,ORD-102052,region,extra_whitespace,leading/trailing spaces,West,  West
+2059,ORD-102054,quantity,invalid_number,zero quantity,1,0
+2062,ORD-102057,order_date,inconsistent_date_format,DD/MM/YYYY,2025-06-13,13/06/2025
+2065,ORD-102060,order_date,inconsistent_date_format,DD/MM/YYYY,2025-06-13,13/06/2025
+2079,ORD-102074,order_date,inconsistent_date_format,DD/MM/YYYY,2025-06-14,14/06/2025
+2080,ORD-102075,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-06-14,14-Jun-2025
+2103,ORD-102098,product_name,extra_whitespace,leading/trailing spaces,Noise-Cancelling Headphones,  Noise-Cancelling Headphones
+2127,ORD-102122,customer_id,missing_value,blank cell,CUST-0130,
+2164,ORD-102159,total_sales,total_mismatch,total_sales does not equal quantity x unit_price,124.95,62.48
+2170,ORD-102165,customer_id,missing_value,blank cell,CUST-0155,
+2202,ORD-102197,payment_method,missing_value,blank cell,Bank Transfer,
+2263,ORD-102258,unit_price,invalid_number,currency symbol in number,22.50,$22.50
+2266,ORD-102261,unit_price,invalid_number,text instead of a number,59.99,TBD
+2286,ORD-102281,region,missing_value,blank cell,South,
+2292,ORD-102287,order_date,inconsistent_date_format,YYYY/MM/DD,2025-06-30,2025/06/30
+2302,ORD-101511,order_id,duplicate_order_id,order ID reused by a different order,ORD-102297,ORD-101511
+2340,,order_id,missing_order_id,blank order ID,ORD-102335,
+2353,ORD-102348,product_name,extra_whitespace,leading/trailing spaces,Ceramic Mug Set, Ceramic Mug Set 
+2358,ORD-102353,region,missing_value,blank cell,North,
+2360,ORD-102355,region,extra_whitespace,leading/trailing spaces,West, West 
+2469,ORD-102464,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-07-14,14-Jul-2025
+2478,ORD-102473,customer_id,missing_value,blank cell,CUST-0236,
+2500,ORD-102495,unit_price,invalid_number,currency symbol in number,24.99,$24.99
+2622,ORD-102617,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-07-26,26-Jul-2025
+2646,ORD-102641,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-07-28,28-Jul-2025
+2668,ORD-102663,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-07-30,30-Jul-2025
+2715,ORD-102710,customer_id,missing_value,blank cell,CUST-0340,
+2769,ORD-102764,product_name,extra_whitespace,leading/trailing spaces,USB-C Charging Hub,  USB-C Charging Hub
+2774,ORD-102769,category,incorrect_category,misspelled or non-standard name,Electronics,Electronis
+2777,ORD-102772,product_name,extra_whitespace,leading/trailing spaces,Natural Lip Balm Set, Natural Lip Balm Set 
+2832,ORD-102827,region,missing_value,blank cell,East,
+2889,ORD-102880,(entire row),exact_duplicate,identical copy of another row,,
+2930,ORD-102924,order_date,inconsistent_date_format,DD/MM/YYYY,2025-08-18,18/08/2025
+2935,ORD-102929,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+2953,ORD-102947,order_date,inconsistent_date_format,DD/MM/YYYY,2025-08-20,20/08/2025
+2983,ORD-102977,category,extra_whitespace,leading/trailing spaces,Office Supplies,Office Supplies   
+3008,ORD-103002,order_date,inconsistent_date_format,DD/MM/YYYY,2025-08-24,24/08/2025
+3021,ORD-103015,region,extra_whitespace,leading/trailing spaces,East,  East
+3027,ORD-103021,payment_method,inconsistent_capitalization,case changed,Credit Card,CREDIT CARD
+3029,ORD-103018,(entire row),exact_duplicate,identical copy of another row,,
+3033,ORD-103026,customer_id,missing_value,blank cell,CUST-0084,
+3042,ORD-103035,region,missing_value,blank cell,Central,
+3046,ORD-103039,order_date,inconsistent_date_format,YYYY/MM/DD,2025-08-27,2025/08/27
+3049,ORD-103042,order_date,inconsistent_date_format,YYYY/MM/DD,2025-08-27,2025/08/27
+3124,ORD-103117,payment_method,inconsistent_capitalization,case changed,Credit Card,credit card
+3128,ORD-103121,customer_id,missing_value,blank cell,CUST-0236,
+3130,ORD-103123,region,missing_value,blank cell,South,
+3256,ORD-103249,product_name,extra_whitespace,leading/trailing spaces,Non-Stick Frying Pan,  Non-Stick Frying Pan
+3258,ORD-103251,order_date,missing_value,blank cell,2025-09-12,
+3259,ORD-103252,payment_method,missing_value,blank cell,Credit Card,
+3343,ORD-103336,total_sales,total_mismatch,total_sales does not equal quantity x unit_price,50.97,25.48
+3370,ORD-103363,payment_method,missing_value,blank cell,Credit Card,
+3381,ORD-103374,payment_method,inconsistent_capitalization,case changed,Credit Card,CREDIT CARD
+3450,ORD-103443,product_name,extra_whitespace,leading/trailing spaces,Moisturizing Hand Cream,  Moisturizing Hand Cream
+3541,ORD-103534,region,extra_whitespace,leading/trailing spaces,West,West   
+3546,ORD-103539,unit_price,invalid_number,text instead of a number,8.49,TBD
+3547,ORD-103540,customer_id,missing_value,blank cell,CUST-0367,
+3612,ORD-103605,order_date,inconsistent_date_format,DD/MM/YYYY,2025-10-06,06/10/2025
+3635,ORD-103628,order_date,inconsistent_date_format,DD/MM/YYYY,2025-10-07,07/10/2025
+3639,ORD-103632,customer_id,missing_value,blank cell,CUST-0128,
+3668,ORD-103661,category,extra_whitespace,leading/trailing spaces,Office Supplies, Office Supplies 
+3705,ORD-103698,order_date,inconsistent_date_format,YYYY/MM/DD,2025-10-12,2025/10/12
+3796,ORD-103789,quantity,invalid_number,negative quantity,3,-3
+3832,ORD-103825,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-10-20,20-Oct-2025
+3837,ORD-103830,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-10-20,20-Oct-2025
+3839,ORD-103832,order_date,inconsistent_date_format,DD/MM/YYYY,2025-10-20,20/10/2025
+3864,ORD-103857,order_date,inconsistent_date_format,DD/MM/YYYY,2025-10-22,22/10/2025
+3878,ORD-103871,region,inconsistent_capitalization,case changed,West,west
+3900,ORD-103893,order_status,inconsistent_capitalization,case changed,Completed,completed
+3911,ORD-103904,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-10-25,25-Oct-2025
+3932,ORD-103925,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-10-26,26-Oct-2025
+3979,ORD-103972,category,incorrect_category,misspelled or non-standard name,Sports & Outdoors,Sport & Outdoors
+3985,ORD-103978,region,missing_value,blank cell,South,
+4038,ORD-104031,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-11-01,01-Nov-2025
+4056,ORD-104049,category,incorrect_category,misspelled or non-standard name,Beauty & Personal Care,Beauty
+4105,ORD-104098,region,inconsistent_capitalization,case changed,Central,central
+4113,ORD-104106,order_date,inconsistent_date_format,DD/MM/YYYY,2025-11-04,04/11/2025
+4123,ORD-104116,customer_id,missing_value,blank cell,CUST-0219,
+4128,ORD-104121,customer_id,missing_value,blank cell,CUST-0414,
+4132,ORD-104125,quantity,invalid_number,zero quantity,2,0
+4135,ORD-104128,order_date,inconsistent_date_format,YYYY/MM/DD,2025-11-05,2025/11/05
+4146,ORD-104139,order_date,inconsistent_date_format,DD/MM/YYYY,2025-11-06,06/11/2025
+4179,ORD-104172,category,incorrect_category,misspelled or non-standard name,Home & Kitchen,Home and Kitchen
+4187,ORD-104180,product_name,extra_whitespace,leading/trailing spaces,Desk Organizer,  Desk Organizer
+4197,ORD-104190,category,incorrect_category,misspelled or non-standard name,Sports & Outdoors,Sport & Outdoors
+4244,ORD-104237,region,inconsistent_capitalization,case changed,North,NORTH
+4262,ORD-104255,payment_method,inconsistent_capitalization,case changed,Debit Card,debit card
+4268,ORD-104258,(entire row),exact_duplicate,identical copy of another row,,
+4286,ORD-104278,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-11-12,12-Nov-2025
+4324,ORD-104316,category,incorrect_category,misspelled or non-standard name,Electronics,Electronis
+4341,ORD-104333,customer_id,missing_value,blank cell,CUST-0052,
+4342,ORD-104334,region,missing_value,blank cell,North,
+4373,ORD-104365,region,inconsistent_capitalization,case changed,Central,CENTRAL
+4425,ORD-104417,region,extra_whitespace,leading/trailing spaces,West,  West
+4447,ORD-104439,category,extra_whitespace,leading/trailing spaces,Beauty & Personal Care,  Beauty & Personal Care
+4473,ORD-104465,payment_method,inconsistent_capitalization,case changed,Credit Card,CREDIT CARD
+4487,ORD-104479,order_date,inconsistent_date_format,DD/MM/YYYY,2025-11-23,23/11/2025
+4491,ORD-104483,order_date,missing_value,blank cell,2025-11-23,
+4496,ORD-104488,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-11-23,23-Nov-2025
+4505,,order_id,missing_order_id,blank order ID,ORD-104497,
+4509,ORD-104501,customer_id,missing_value,blank cell,CUST-0212,
+4557,ORD-104549,order_date,inconsistent_date_format,DD/MM/YYYY,2025-11-26,26/11/2025
+4671,ORD-104663,quantity,invalid_number,zero quantity,2,0
+4672,ORD-104664,category,incorrect_category,misspelled or non-standard name,Home & Kitchen,Home & Kitchn
+4675,ORD-104667,category,incorrect_category,misspelled or non-standard name,Electronics,Electronis
+4715,ORD-104707,order_date,future_date,date after the data period,2025-12-03,2027-12-03
+4766,ORD-104758,unit_price,invalid_number,currency symbol in number,59.99,$59.99
+4779,ORD-104771,region,inconsistent_capitalization,case changed,West,west
+4791,ORD-104783,category,incorrect_category,misspelled or non-standard name,Office Supplies,Office Supply
+4815,ORD-104807,order_date,inconsistent_date_format,YYYY/MM/DD,2025-12-08,2025/12/08
+4824,ORD-104816,order_date,inconsistent_date_format,DD/MM/YYYY,2025-12-08,08/12/2025
+4827,ORD-104819,category,incorrect_category,misspelled or non-standard name,Sports & Outdoors,Sports and Outdoor
+4859,ORD-104851,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-12-09,09-Dec-2025
+4865,ORD-104857,region,inconsistent_capitalization,case changed,North,north
+4895,ORD-106279,order_id,duplicate_order_id,order ID reused by a different order,ORD-104887,ORD-106279
+4925,ORD-104917,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-12-12,12-Dec-2025
+4932,ORD-104924,category,extra_whitespace,leading/trailing spaces,Office Supplies,  Office Supplies
+4976,ORD-104968,region,extra_whitespace,leading/trailing spaces,South,  South
+4978,ORD-104970,order_date,impossible_date,date that does not exist,2025-12-15,2025-02-30
+5008,ORD-105000,region,missing_value,blank cell,South,
+5025,ORD-105017,unit_price,invalid_number,text instead of a number,14.50,N/A
+5065,ORD-105057,category,incorrect_category,misspelled or non-standard name,Home & Kitchen,Home and Kitchen
+5104,ORD-105091,(entire row),exact_duplicate,identical copy of another row,,
+5203,ORD-105194,payment_method,inconsistent_capitalization,case changed,Digital Wallet,digital wallet
+5204,ORD-105195,order_date,inconsistent_date_format,YYYY/MM/DD,2025-12-26,2025/12/26
+5224,ORD-105215,category,incorrect_category,misspelled or non-standard name,Home & Kitchen,Home & Kitchn
+5226,ORD-105217,unit_price,invalid_number,text instead of a number,18.99,unknown
+5229,ORD-105220,order_date,inconsistent_date_format,DD-Mon-YYYY,2025-12-27,27-Dec-2025
+5231,ORD-105222,payment_method,inconsistent_capitalization,case changed,Credit Card,CREDIT CARD
+5251,ORD-105242,order_date,inconsistent_date_format,YYYY/MM/DD,2025-12-27,2025/12/27
+5252,ORD-105243,quantity,invalid_number,negative quantity,1,-1
+5256,ORD-105247,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+5338,ORD-105329,category,extra_whitespace,leading/trailing spaces,Sports & Outdoors,Sports & Outdoors   
+5365,ORD-105356,region,extra_whitespace,leading/trailing spaces,East,East   
+5368,ORD-105359,payment_method,inconsistent_capitalization,case changed,Cash,cash
+5373,ORD-105364,order_date,inconsistent_date_format,DD/MM/YYYY,2026-01-03,03/01/2026
+5410,ORD-105401,region,inconsistent_capitalization,case changed,Central,central
+5411,ORD-105402,product_name,extra_whitespace,leading/trailing spaces,Wireless Mouse,  Wireless Mouse
+5423,ORD-105414,order_date,future_date,date after the data period,2026-01-06,2027-01-06
+5430,ORD-105421,order_date,inconsistent_date_format,DD-Mon-YYYY,2026-01-07,07-Jan-2026
+5448,ORD-105439,quantity,missing_value,blank cell,5,
+5451,ORD-105442,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+5469,ORD-105460,order_date,inconsistent_date_format,DD-Mon-YYYY,2026-01-10,10-Jan-2026
+5498,ORD-105489,order_date,inconsistent_date_format,DD/MM/YYYY,2026-01-13,13/01/2026
+5554,ORD-105545,order_date,inconsistent_date_format,YYYY/MM/DD,2026-01-18,2026/01/18
+5567,ORD-105558,order_date,inconsistent_date_format,YYYY/MM/DD,2026-01-19,2026/01/19
+5642,ORD-105633,payment_method,inconsistent_capitalization,case changed,Credit Card,CREDIT CARD
+5659,ORD-105650,customer_id,missing_value,blank cell,CUST-0445,
+5688,ORD-105679,customer_id,missing_value,blank cell,CUST-0265,
+5701,ORD-105692,unit_price,invalid_number,text instead of a number,41.99,unknown
+5747,ORD-105738,region,extra_whitespace,leading/trailing spaces,East, East 
+5768,ORD-105759,region,missing_value,blank cell,South,
+5799,ORD-105790,order_date,inconsistent_date_format,DD/MM/YYYY,2026-02-05,05/02/2026
+5837,ORD-105828,total_sales,total_mismatch,total_sales does not equal quantity x unit_price,35.98,359.80
+5842,ORD-105833,category,incorrect_category,misspelled or non-standard name,Home & Kitchen,Home & Kitchn
+5860,ORD-105851,region,missing_value,blank cell,East,
+5878,ORD-105869,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+5879,ORD-105870,quantity,missing_value,blank cell,2,
+5899,ORD-105890,category,extra_whitespace,leading/trailing spaces,Beauty & Personal Care,Beauty & Personal Care   
+5923,ORD-104423,order_id,duplicate_order_id,order ID reused by a different order,ORD-105914,ORD-104423
+5926,ORD-105917,region,inconsistent_capitalization,case changed,West,WEST
+5932,ORD-105923,quantity,invalid_number,zero quantity,2,0
+5934,ORD-105925,region,missing_value,blank cell,Central,
+5939,ORD-105930,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+5953,ORD-105944,category,extra_whitespace,leading/trailing spaces,Home & Kitchen,  Home & Kitchen
+5954,ORD-105945,order_date,inconsistent_date_format,DD/MM/YYYY,2026-02-16,16/02/2026
+5956,ORD-105947,order_date,inconsistent_date_format,YYYY/MM/DD,2026-02-16,2026/02/16
+5981,ORD-105972,category,extra_whitespace,leading/trailing spaces,Electronics, Electronics 
+6090,ORD-106081,product_name,extra_whitespace,leading/trailing spaces,Camping Lantern,  Camping Lantern
+6127,ORD-106118,category,extra_whitespace,leading/trailing spaces,Electronics, Electronics 
+6141,ORD-106132,order_date,inconsistent_date_format,DD-Mon-YYYY,2026-03-03,03-Mar-2026
+6183,ORD-106168,(entire row),exact_duplicate,identical copy of another row,,
+6188,ORD-106178,product_name,extra_whitespace,leading/trailing spaces,Natural Lip Balm Set,Natural Lip Balm Set   
+6193,ORD-106183,category,incorrect_category,misspelled or non-standard name,Electronics,Electronis
+6201,ORD-106191,order_date,impossible_date,date that does not exist,2026-03-09,2025-13-05
+6238,ORD-106228,payment_method,inconsistent_capitalization,case changed,Digital Wallet,DIGITAL WALLET
+6297,ORD-106282,(entire row),exact_duplicate,identical copy of another row,,
+6304,ORD-106291,(entire row),exact_duplicate,identical copy of another row,,
+6310,ORD-106298,quantity,missing_value,blank cell,1,
+6312,ORD-106300,region,inconsistent_capitalization,case changed,East,east
+6363,ORD-106351,region,extra_whitespace,leading/trailing spaces,East,  East
+6395,ORD-106383,quantity,invalid_number,negative quantity,2,-2
+6401,ORD-106389,order_status,unknown_status,status not in the allowed list,Completed,Unknown
+6414,ORD-106402,product_name,extra_whitespace,leading/trailing spaces,Natural Lip Balm Set, Natural Lip Balm Set 
+6426,ORD-106414,region,inconsistent_capitalization,case changed,East,EAST
+6439,ORD-106427,payment_method,missing_value,blank cell,Credit Card,
+6454,ORD-106440,(entire row),exact_duplicate,identical copy of another row,,
+6506,ORD-106493,region,inconsistent_capitalization,case changed,East,east
+6517,ORD-106504,order_date,inconsistent_date_format,DD/MM/YYYY,2026-03-30,30/03/2026
+6530,ORD-106517,payment_method,missing_value,blank cell,Credit Card,
+6537,ORD-106524,product_name,extra_whitespace,leading/trailing spaces,Yoga Mat,Yoga Mat   
+6540,ORD-106522,(entire row),exact_duplicate,identical copy of another row,,
+6564,ORD-106550,order_date,inconsistent_date_format,DD/MM/YYYY,2026-04-01,01/04/2026
+6666,ORD-106652,region,missing_value,blank cell,East,
+6669,ORD-106655,category,incorrect_category,misspelled or non-standard name,Office Supplies,Office Supply
+6691,ORD-106677,category,extra_whitespace,leading/trailing spaces,Sports & Outdoors,Sports & Outdoors   
+6700,ORD-106686,region,missing_value,blank cell,Central,
+6704,ORD-106684,(entire row),exact_duplicate,identical copy of another row,,
+6739,ORD-106724,order_date,impossible_date,date that does not exist,2026-04-11,2025-04-31
+6780,ORD-106765,payment_method,missing_value,blank cell,Digital Wallet,
+6787,ORD-106772,region,inconsistent_capitalization,case changed,Central,central
+6808,ORD-106793,order_date,inconsistent_date_format,DD/MM/YYYY,2026-04-15,15/04/2026
+6831,ORD-106816,order_date,inconsistent_date_format,DD/MM/YYYY,2026-04-16,16/04/2026
+6889,ORD-106874,region,inconsistent_capitalization,case changed,South,SOUTH
+6897,ORD-106882,order_date,inconsistent_date_format,YYYY/MM/DD,2026-04-20,2026/04/20
+6905,,order_id,missing_order_id,blank order ID,ORD-106890,
+6909,ORD-106894,order_date,inconsistent_date_format,DD/MM/YYYY,2026-04-21,21/04/2026
+6916,ORD-106901,order_date,inconsistent_date_format,YYYY/MM/DD,2026-04-22,2026/04/22
+6918,ORD-106903,customer_id,missing_value,blank cell,CUST-0262,
+6942,ORD-106927,customer_id,missing_value,blank cell,CUST-0337,
+6946,ORD-106931,quantity,implausible_value,unrealistically large quantity,1,250
+6968,ORD-106953,order_date,inconsistent_date_format,DD/MM/YYYY,2026-04-25,25/04/2026
+6976,ORD-106961,order_date,inconsistent_date_format,YYYY/MM/DD,2026-04-26,2026/04/26
+6994,ORD-106973,(entire row),exact_duplicate,identical copy of another row,,
+6998,ORD-106982,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+7026,ORD-107010,category,incorrect_category,misspelled or non-standard name,Beauty & Personal Care,Beauty
+7029,ORD-107013,customer_id,missing_value,blank cell,CUST-0146,
+7043,ORD-107027,product_name,extra_whitespace,leading/trailing spaces,Gel Pen Pack, Gel Pen Pack 
+7063,ORD-107047,payment_method,missing_value,blank cell,Digital Wallet,
+7066,ORD-107050,order_date,inconsistent_date_format,DD/MM/YYYY,2026-05-01,01/05/2026
+7075,ORD-107059,region,inconsistent_capitalization,case changed,East,EAST
+7076,ORD-107060,order_date,inconsistent_date_format,DD/MM/YYYY,2026-05-02,02/05/2026
+7094,ORD-107078,product_name,extra_whitespace,leading/trailing spaces,Ceramic Mug Set,Ceramic Mug Set   
+7108,ORD-107092,order_date,inconsistent_date_format,DD-Mon-YYYY,2026-05-04,04-May-2026
+7202,ORD-107180,(entire row),exact_duplicate,identical copy of another row,,
+7215,ORD-107198,customer_id,missing_value,blank cell,CUST-0360,
+7251,ORD-107234,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+7278,ORD-107261,order_date,future_date,date after the data period,2026-05-14,2027-05-14
+7306,ORD-107289,order_date,inconsistent_date_format,DD/MM/YYYY,2026-05-16,16/05/2026
+7321,ORD-107304,region,extra_whitespace,leading/trailing spaces,Central, Central 
+7346,ORD-107329,quantity,missing_value,blank cell,3,
+7353,ORD-107336,region,missing_value,blank cell,Central,
+7415,ORD-107398,category,extra_whitespace,leading/trailing spaces,Home & Kitchen, Home & Kitchen 
+7422,ORD-107405,region,extra_whitespace,leading/trailing spaces,South, South 
+7433,ORD-107416,category,extra_whitespace,leading/trailing spaces,Home & Kitchen,Home & Kitchen   
+7434,ORD-107417,quantity,missing_value,blank cell,5,
+7458,ORD-107441,region,inconsistent_capitalization,case changed,South,SOUTH
+7464,ORD-107447,region,inconsistent_capitalization,case changed,North,NORTH
+7469,ORD-107452,category,incorrect_category,misspelled or non-standard name,Home & Kitchen,Home & Kitchn
+7486,ORD-107469,region,extra_whitespace,leading/trailing spaces,West,  West
+7518,ORD-107501,order_date,inconsistent_date_format,YYYY/MM/DD,2026-05-29,2026/05/29
+7557,ORD-107540,quantity,invalid_number,negative quantity,1,-1
+7628,ORD-107607,(entire row),exact_duplicate,identical copy of another row,,
+7643,ORD-107625,region,extra_whitespace,leading/trailing spaces,Central, Central 
+7659,ORD-107641,order_status,inconsistent_capitalization,case changed,Completed,COMPLETED
+7660,ORD-107642,payment_method,inconsistent_capitalization,case changed,Digital Wallet,digital wallet
+7708,ORD-107690,order_date,inconsistent_date_format,YYYY/MM/DD,2026-06-11,2026/06/11
+7719,ORD-107699,(entire row),exact_duplicate,identical copy of another row,,
+7764,ORD-107745,customer_id,missing_value,blank cell,CUST-0348,
+7776,ORD-107757,quantity,implausible_value,unrealistically large quantity,1,250
+7784,ORD-104586,order_id,duplicate_order_id,order ID reused by a different order,ORD-107765,ORD-104586
+7802,ORD-107783,order_date,inconsistent_date_format,DD/MM/YYYY,2026-06-17,17/06/2026
+7804,ORD-107785,category,incorrect_category,misspelled or non-standard name,Sports & Outdoors,Sports and Outdoor
+7806,ORD-107787,customer_id,missing_value,blank cell,CUST-0236,
+7824,ORD-107805,product_name,extra_whitespace,leading/trailing spaces,Non-Stick Frying Pan,  Non-Stick Frying Pan
+7828,ORD-107809,customer_id,missing_value,blank cell,CUST-0035,
+7833,ORD-107811,(entire row),exact_duplicate,identical copy of another row,,
+7840,ORD-107820,product_name,extra_whitespace,leading/trailing spaces,Aromatherapy Diffuser,  Aromatherapy Diffuser
+7859,ORD-107839,category,extra_whitespace,leading/trailing spaces,Electronics,Electronics   
+7890,ORD-107870,product_name,extra_whitespace,leading/trailing spaces,Aromatherapy Diffuser, Aromatherapy Diffuser 
+7904,ORD-107884,region,inconsistent_capitalization,case changed,North,NORTH
+7919,ORD-107899,total_sales,total_mismatch,total_sales does not equal quantity x unit_price,57.98,28.99
+7963,ORD-107943,order_date,inconsistent_date_format,DD-Mon-YYYY,2026-06-27,27-Jun-2026
+7990,ORD-107970,order_status,inconsistent_capitalization,case changed,Pending,PENDING
+8001,ORD-107981,quantity,missing_value,blank cell,1,

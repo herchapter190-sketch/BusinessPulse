@@ -1,0 +1,500 @@
+expense_id,expense_date,category,description,amount,department,payment_method
+EXP-00001,2025-01-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00002,2025-01-03,Marketing,Online advertising campaign,1024.51,Marketing,Company Card
+EXP-00003,2025-01-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00004,2025-01-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00005,2025-01-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00006,2025-01-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00007,2025-01-06,Shipping & Logistics,Weekly carrier invoice,246.43,Operations,Bank Transfer
+EXP-00008,2025-01-08,Packaging,Packaging materials order,228.37,Operations,Bank Transfer
+EXP-00009,2025-01-10,Utilities,Electricity bill,555.88,Operations,Direct Debit
+EXP-00010,2025-01-10,Utilities,Water bill,64.20,Operations,Direct Debit
+EXP-00011,2025-01-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00012,2025-01-13,Shipping & Logistics,Weekly carrier invoice,365.12,Operations,Bank Transfer
+EXP-00013,2025-01-15,Insurance,Quarterly business insurance premium,1150.00,Finance,Bank Transfer
+EXP-00014,2025-01-17,Office Supplies,Printer paper and toner,140.65,Operations,Cash
+EXP-00015,2025-01-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00016,2025-01-20,Professional Services,Quarterly accounting review,750.00,Finance,Bank Transfer
+EXP-00017,2025-01-20,Shipping & Logistics,Weekly carrier invoice,271.33,Operations,Bank Transfer
+EXP-00018,2025-01-22,Packaging,Packaging materials order,236.41,Operations,Bank Transfer
+EXP-00019,2025-01-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00020,2025-01-27,Shipping & Logistics,Weekly carrier invoice,354.08,Operations,Bank Transfer
+EXP-00021,2025-01-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00022,2025-01-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00023,2025-01-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00024,2025-01-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00025,2025-01-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00026,2025-01-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00027,2025-01-31,Bank & Payment Fees,Card payment processing fees,358.15,Finance,Direct Debit
+EXP-00028,2025-02-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00029,2025-02-03,Marketing,Online advertising campaign,942.48,Marketing,Company Card
+EXP-00030,2025-02-03,Shipping & Logistics,Weekly carrier invoice,304.35,Operations,Bank Transfer
+EXP-00031,2025-02-05,Office Supplies,Printer paper and toner,165.87,Operations,Company Card
+EXP-00032,2025-02-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00033,2025-02-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00034,2025-02-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00035,2025-02-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00036,2025-02-08,Packaging,Packaging materials order,194.83,Operations,Bank Transfer
+EXP-00037,2025-02-10,Shipping & Logistics,Weekly carrier invoice,359.89,Operations,Bank Transfer
+EXP-00038,2025-02-10,Utilities,Electricity bill,526.33,Operations,Direct Debit
+EXP-00039,2025-02-10,Utilities,Water bill,66.05,Operations,Direct Debit
+EXP-00040,2025-02-11,Office Supplies,Cleaning supplies,162.88,Operations,Company Card
+EXP-00041,2025-02-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00042,2025-02-17,Shipping & Logistics,Weekly carrier invoice,252.32,Operations,Bank Transfer
+EXP-00043,2025-02-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00044,2025-02-22,Packaging,Packaging materials order,191.00,Operations,Bank Transfer
+EXP-00045,2025-02-24,Shipping & Logistics,Weekly carrier invoice,324.01,Operations,Bank Transfer
+EXP-00046,2025-02-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00047,2025-02-28,Bank & Payment Fees,Card payment processing fees,332.08,Finance,Direct Debit
+EXP-00048,2025-02-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00049,2025-02-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00050,2025-02-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00051,2025-02-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00052,2025-02-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00053,2025-02-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00054,2025-03-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00055,2025-03-03,Marketing,Online advertising campaign,1085.45,Marketing,Company Card
+EXP-00056,2025-03-03,Shipping & Logistics,Weekly carrier invoice,307.08,Operations,Bank Transfer
+EXP-00057,2025-03-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00058,2025-03-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00059,2025-03-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00060,2025-03-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00061,2025-03-08,Packaging,Packaging materials order,261.91,Operations,Bank Transfer
+EXP-00062,2025-03-10,Shipping & Logistics,Weekly carrier invoice,377.23,Operations,Bank Transfer
+EXP-00063,2025-03-10,Utilities,Electricity bill,472.73,Operations,Direct Debit
+EXP-00064,2025-03-10,Utilities,Water bill,68.08,Operations,Direct Debit
+EXP-00065,2025-03-11,Office Supplies,Stationery restock,45.40,Finance,Company Card
+EXP-00066,2025-03-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00067,2025-03-14,Equipment,Laptop replacement,1250.00,IT,Company Card
+EXP-00068,2025-03-17,Shipping & Logistics,Weekly carrier invoice,396.85,Operations,Bank Transfer
+EXP-00069,2025-03-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00070,2025-03-22,Packaging,Packaging materials order,267.54,Operations,Bank Transfer
+EXP-00071,2025-03-22,Travel,Client visit travel,173.62,Sales,Company Card
+EXP-00072,2025-03-24,Shipping & Logistics,Weekly carrier invoice,346.40,Operations,Bank Transfer
+EXP-00073,2025-03-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00074,2025-03-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00075,2025-03-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00076,2025-03-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00077,2025-03-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00078,2025-03-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00079,2025-03-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00080,2025-03-31,Bank & Payment Fees,Card payment processing fees,392.88,Finance,Direct Debit
+EXP-00081,2025-03-31,Shipping & Logistics,Weekly carrier invoice,363.79,Operations,Bank Transfer
+EXP-00082,2025-04-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00083,2025-04-03,Marketing,Online advertising campaign,1332.07,Marketing,Company Card
+EXP-00084,2025-04-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00085,2025-04-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00086,2025-04-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00087,2025-04-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00088,2025-04-07,Shipping & Logistics,Weekly carrier invoice,421.45,Operations,Bank Transfer
+EXP-00089,2025-04-08,Office Supplies,Breakroom supplies,136.05,Human Resources,Company Card
+EXP-00090,2025-04-08,Packaging,Packaging materials order,307.73,Operations,Bank Transfer
+EXP-00091,2025-04-10,Utilities,Electricity bill,414.82,Operations,Direct Debit
+EXP-00092,2025-04-10,Utilities,Water bill,67.88,Operations,Direct Debit
+EXP-00093,2025-04-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00094,2025-04-14,Shipping & Logistics,Weekly carrier invoice,442.70,Operations,Bank Transfer
+EXP-00095,2025-04-15,Insurance,Quarterly business insurance premium,1150.00,Finance,Bank Transfer
+EXP-00096,2025-04-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00097,2025-04-20,Office Supplies,Breakroom supplies,127.52,Human Resources,Cash
+EXP-00098,2025-04-20,Professional Services,Quarterly accounting review,750.00,Finance,Bank Transfer
+EXP-00099,2025-04-21,Shipping & Logistics,Weekly carrier invoice,413.01,Operations,Bank Transfer
+EXP-00100,2025-04-22,Packaging,Packaging materials order,322.09,Operations,Bank Transfer
+EXP-00101,2025-04-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00102,2025-04-27,Travel,Trade fair attendance travel,583.51,Sales,Company Card
+EXP-00103,2025-04-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00104,2025-04-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00105,2025-04-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00106,2025-04-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00107,2025-04-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00108,2025-04-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00109,2025-04-28,Shipping & Logistics,Weekly carrier invoice,438.07,Operations,Bank Transfer
+EXP-00110,2025-04-30,Bank & Payment Fees,Card payment processing fees,478.50,Finance,Direct Debit
+EXP-00111,2025-05-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00112,2025-05-03,Marketing,Online advertising campaign,1154.25,Marketing,Company Card
+EXP-00113,2025-05-05,Shipping & Logistics,Weekly carrier invoice,487.20,Operations,Bank Transfer
+EXP-00114,2025-05-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00115,2025-05-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00116,2025-05-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00117,2025-05-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00118,2025-05-08,Packaging,Packaging materials order,285.99,Operations,Bank Transfer
+EXP-00119,2025-05-10,Utilities,Electricity bill,394.22,Operations,Direct Debit
+EXP-00120,2025-05-10,Utilities,Water bill,68.79,Operations,Direct Debit
+EXP-00121,2025-05-11,Office Supplies,Stationery restock,149.23,Finance,Company Card
+EXP-00122,2025-05-12,Shipping & Logistics,Weekly carrier invoice,486.20,Operations,Bank Transfer
+EXP-00123,2025-05-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00124,2025-05-13,Office Supplies,Stationery restock,137.52,Operations,Cash
+EXP-00125,2025-05-16,Travel,Supplier meeting travel,472.27,Sales,Company Card
+EXP-00126,2025-05-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00127,2025-05-19,Shipping & Logistics,Weekly carrier invoice,434.02,Operations,Bank Transfer
+EXP-00128,2025-05-19,Travel,Trade fair attendance travel,567.41,Sales,Company Card
+EXP-00129,2025-05-22,Packaging,Packaging materials order,282.71,Operations,Bank Transfer
+EXP-00130,2025-05-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00131,2025-05-26,Shipping & Logistics,Weekly carrier invoice,411.94,Operations,Bank Transfer
+EXP-00132,2025-05-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00133,2025-05-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00134,2025-05-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00135,2025-05-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00136,2025-05-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00137,2025-05-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00138,2025-05-31,Bank & Payment Fees,Card payment processing fees,464.80,Finance,Direct Debit
+EXP-00139,2025-06-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00140,2025-06-02,Shipping & Logistics,Weekly carrier invoice,271.24,Operations,Bank Transfer
+EXP-00141,2025-06-03,Marketing,Online advertising campaign,1153.01,Marketing,Company Card
+EXP-00142,2025-06-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00143,2025-06-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00144,2025-06-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00145,2025-06-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00146,2025-06-06,Office Supplies,Cleaning supplies,153.54,Operations,Cash
+EXP-00147,2025-06-08,Packaging,Packaging materials order,300.06,Operations,Bank Transfer
+EXP-00148,2025-06-09,Equipment,Warehouse shelving units,1800.00,Operations,Company Card
+EXP-00149,2025-06-09,Shipping & Logistics,Weekly carrier invoice,493.06,Operations,Bank Transfer
+EXP-00150,2025-06-10,Utilities,Electricity bill,432.72,Operations,Direct Debit
+EXP-00151,2025-06-10,Utilities,Water bill,67.52,Operations,Direct Debit
+EXP-00152,2025-06-12,Travel,Client visit travel,519.59,Sales,Company Card
+EXP-00153,2025-06-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00154,2025-06-15,Travel,Client visit travel,172.07,Sales,Company Card
+EXP-00155,2025-06-16,Shipping & Logistics,Weekly carrier invoice,453.90,Operations,Bank Transfer
+EXP-00156,2025-06-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00157,2025-06-22,Packaging,Packaging materials order,263.12,Operations,Bank Transfer
+EXP-00158,2025-06-23,Shipping & Logistics,Weekly carrier invoice,426.22,Operations,Bank Transfer
+EXP-00159,2025-06-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00160,2025-06-26,Office Supplies,Printer paper and toner,137.39,Finance,Company Card
+EXP-00161,2025-06-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00162,2025-06-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00163,2025-06-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00164,2025-06-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00165,2025-06-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00166,2025-06-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00167,2025-06-30,Bank & Payment Fees,Card payment processing fees,486.58,Finance,Direct Debit
+EXP-00168,2025-06-30,Shipping & Logistics,Weekly carrier invoice,338.19,Operations,Bank Transfer
+EXP-00169,2025-07-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00170,2025-07-03,Marketing,Online advertising campaign,1093.82,Marketing,Company Card
+EXP-00171,2025-07-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00172,2025-07-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00173,2025-07-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00174,2025-07-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00175,2025-07-07,Office Supplies,Breakroom supplies,154.40,Human Resources,Cash
+EXP-00176,2025-07-07,Shipping & Logistics,Weekly carrier invoice,317.72,Operations,Bank Transfer
+EXP-00177,2025-07-08,Packaging,Packaging materials order,273.45,Operations,Bank Transfer
+EXP-00178,2025-07-10,Utilities,Electricity bill,463.34,Operations,Direct Debit
+EXP-00179,2025-07-10,Utilities,Water bill,67.86,Operations,Direct Debit
+EXP-00180,2025-07-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00181,2025-07-14,Shipping & Logistics,Weekly carrier invoice,411.63,Operations,Bank Transfer
+EXP-00182,2025-07-15,Insurance,Quarterly business insurance premium,1150.00,Finance,Bank Transfer
+EXP-00183,2025-07-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00184,2025-07-18,Travel,Supplier meeting travel,245.62,Sales,Company Card
+EXP-00185,2025-07-20,Professional Services,Quarterly accounting review,750.00,Finance,Bank Transfer
+EXP-00186,2025-07-21,Shipping & Logistics,Weekly carrier invoice,340.52,Operations,Bank Transfer
+EXP-00187,2025-07-22,Packaging,Packaging materials order,256.29,Operations,Bank Transfer
+EXP-00188,2025-07-23,Travel,Trade fair attendance travel,572.04,Sales,Company Card
+EXP-00189,2025-07-24,Office Supplies,Cleaning supplies,176.85,Operations,Company Card
+EXP-00190,2025-07-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00191,2025-07-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00192,2025-07-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00193,2025-07-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00194,2025-07-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00195,2025-07-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00196,2025-07-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00197,2025-07-28,Shipping & Logistics,Weekly carrier invoice,374.68,Operations,Bank Transfer
+EXP-00198,2025-07-31,Bank & Payment Fees,Card payment processing fees,392.89,Finance,Direct Debit
+EXP-00199,2025-08-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00200,2025-08-03,Marketing,Online advertising campaign,1240.04,Marketing,Company Card
+EXP-00201,2025-08-04,Office Supplies,Printer paper and toner,100.64,Human Resources,Cash
+EXP-00202,2025-08-04,Shipping & Logistics,Weekly carrier invoice,272.48,Operations,Bank Transfer
+EXP-00203,2025-08-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00204,2025-08-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00205,2025-08-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00206,2025-08-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00207,2025-08-07,Office Supplies,Printer paper and toner,56.52,Human Resources,Company Card
+EXP-00208,2025-08-08,Packaging,Packaging materials order,289.85,Operations,Bank Transfer
+EXP-00209,2025-08-10,Utilities,Electricity bill,496.42,Operations,Direct Debit
+EXP-00210,2025-08-10,Utilities,Water bill,62.75,Operations,Direct Debit
+EXP-00211,2025-08-11,Shipping & Logistics,Weekly carrier invoice,500.27,Operations,Bank Transfer
+EXP-00212,2025-08-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00213,2025-08-13,Travel,Supplier meeting travel,641.32,Sales,Company Card
+EXP-00214,2025-08-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00215,2025-08-18,Shipping & Logistics,Weekly carrier invoice,478.49,Operations,Bank Transfer
+EXP-00216,2025-08-22,Packaging,Packaging materials order,315.00,Operations,Bank Transfer
+EXP-00217,2025-08-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00218,2025-08-25,Shipping & Logistics,Weekly carrier invoice,331.93,Operations,Bank Transfer
+EXP-00219,2025-08-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00220,2025-08-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00221,2025-08-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00222,2025-08-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00223,2025-08-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00224,2025-08-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00225,2025-08-31,Bank & Payment Fees,Card payment processing fees,476.88,Finance,Direct Debit
+EXP-00226,2025-09-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00227,2025-09-01,Shipping & Logistics,Weekly carrier invoice,381.79,Operations,Bank Transfer
+EXP-00228,2025-09-03,Marketing,Online advertising campaign,1136.76,Marketing,Company Card
+EXP-00229,2025-09-04,Office Supplies,Printer paper and toner,168.25,Finance,Company Card
+EXP-00230,2025-09-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00231,2025-09-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00232,2025-09-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00233,2025-09-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00234,2025-09-08,Packaging,Packaging materials order,257.17,Operations,Bank Transfer
+EXP-00235,2025-09-08,Shipping & Logistics,Weekly carrier invoice,324.91,Operations,Bank Transfer
+EXP-00236,2025-09-09,Office Supplies,Cleaning supplies,132.86,Human Resources,Company Card
+EXP-00237,2025-09-10,Utilities,Electricity bill,403.31,Operations,Direct Debit
+EXP-00238,2025-09-10,Utilities,Water bill,65.57,Operations,Direct Debit
+EXP-00239,2025-09-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00240,2025-09-15,Shipping & Logistics,Weekly carrier invoice,511.69,Operations,Bank Transfer
+EXP-00241,2025-09-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00242,2025-09-22,Marketing,Trade show booth rental,2400.00,Marketing,Bank Transfer
+EXP-00243,2025-09-22,Packaging,Packaging materials order,256.13,Operations,Bank Transfer
+EXP-00244,2025-09-22,Shipping & Logistics,Weekly carrier invoice,307.87,Operations,Bank Transfer
+EXP-00245,2025-09-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00246,2025-09-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00247,2025-09-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00248,2025-09-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00249,2025-09-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00250,2025-09-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00251,2025-09-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00252,2025-09-29,Shipping & Logistics,Weekly carrier invoice,487.53,Operations,Bank Transfer
+EXP-00253,2025-09-30,Bank & Payment Fees,Card payment processing fees,431.49,Finance,Direct Debit
+EXP-00254,2025-10-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00255,2025-10-03,Marketing,Online advertising campaign,2151.60,Marketing,Company Card
+EXP-00256,2025-10-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00257,2025-10-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00258,2025-10-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00259,2025-10-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00260,2025-10-06,Shipping & Logistics,Weekly carrier invoice,450.52,Operations,Bank Transfer
+EXP-00261,2025-10-08,Packaging,Packaging materials order,333.04,Operations,Bank Transfer
+EXP-00262,2025-10-10,Utilities,Electricity bill,406.58,Operations,Direct Debit
+EXP-00263,2025-10-10,Utilities,Water bill,71.33,Operations,Direct Debit
+EXP-00264,2025-10-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00265,2025-10-13,Shipping & Logistics,Weekly carrier invoice,448.69,Operations,Bank Transfer
+EXP-00266,2025-10-15,Insurance,Quarterly business insurance premium,1150.00,Finance,Bank Transfer
+EXP-00267,2025-10-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00268,2025-10-20,Professional Services,Quarterly accounting review,750.00,Finance,Bank Transfer
+EXP-00269,2025-10-20,Shipping & Logistics,Weekly carrier invoice,416.71,Operations,Bank Transfer
+EXP-00270,2025-10-22,Packaging,Packaging materials order,364.03,Operations,Bank Transfer
+EXP-00271,2025-10-25,Office Supplies,Breakroom supplies,101.37,Human Resources,Company Card
+EXP-00272,2025-10-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00273,2025-10-27,Shipping & Logistics,Weekly carrier invoice,551.87,Operations,Bank Transfer
+EXP-00274,2025-10-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00275,2025-10-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00276,2025-10-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00277,2025-10-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00278,2025-10-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00279,2025-10-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00280,2025-10-31,Bank & Payment Fees,Card payment processing fees,497.93,Finance,Direct Debit
+EXP-00281,2025-11-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00282,2025-11-03,Marketing,Online advertising campaign,3317.42,Marketing,Company Card
+EXP-00283,2025-11-03,Shipping & Logistics,Weekly carrier invoice,668.46,Operations,Bank Transfer
+EXP-00284,2025-11-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00285,2025-11-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00286,2025-11-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00287,2025-11-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00288,2025-11-08,Packaging,Packaging materials order,434.91,Operations,Bank Transfer
+EXP-00289,2025-11-10,Shipping & Logistics,Weekly carrier invoice,618.98,Operations,Bank Transfer
+EXP-00290,2025-11-10,Travel,Trade fair attendance travel,631.71,Sales,Company Card
+EXP-00291,2025-11-10,Utilities,Electricity bill,469.03,Operations,Direct Debit
+EXP-00292,2025-11-10,Utilities,Water bill,63.97,Operations,Direct Debit
+EXP-00293,2025-11-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00294,2025-11-17,Shipping & Logistics,Weekly carrier invoice,511.99,Operations,Bank Transfer
+EXP-00295,2025-11-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00296,2025-11-22,Packaging,Packaging materials order,461.83,Operations,Bank Transfer
+EXP-00297,2025-11-23,Travel,Client visit travel,277.52,Sales,Company Card
+EXP-00298,2025-11-24,Shipping & Logistics,Weekly carrier invoice,644.07,Operations,Bank Transfer
+EXP-00299,2025-11-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00300,2025-11-27,Office Supplies,Stationery restock,56.99,Human Resources,Company Card
+EXP-00301,2025-11-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00302,2025-11-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00303,2025-11-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00304,2025-11-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00305,2025-11-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00306,2025-11-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00307,2025-11-30,Bank & Payment Fees,Card payment processing fees,724.61,Finance,Direct Debit
+EXP-00308,2025-12-01,Rent,Monthly office and warehouse rent,2400.00,Operations,Bank Transfer
+EXP-00309,2025-12-01,Shipping & Logistics,Weekly carrier invoice,650.29,Operations,Bank Transfer
+EXP-00310,2025-12-03,Marketing,Online advertising campaign,2128.94,Marketing,Company Card
+EXP-00311,2025-12-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00312,2025-12-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00313,2025-12-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00314,2025-12-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00315,2025-12-08,Packaging,Packaging materials order,504.41,Operations,Bank Transfer
+EXP-00316,2025-12-08,Shipping & Logistics,Weekly carrier invoice,598.04,Operations,Bank Transfer
+EXP-00317,2025-12-10,Utilities,Electricity bill,567.63,Operations,Direct Debit
+EXP-00318,2025-12-10,Utilities,Water bill,58.95,Operations,Direct Debit
+EXP-00319,2025-12-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00320,2025-12-15,Shipping & Logistics,Weekly carrier invoice,706.97,Operations,Bank Transfer
+EXP-00321,2025-12-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00322,2025-12-18,Office Supplies,Breakroom supplies,62.63,Finance,Company Card
+EXP-00323,2025-12-22,Packaging,Packaging materials order,477.39,Operations,Bank Transfer
+EXP-00324,2025-12-22,Shipping & Logistics,Weekly carrier invoice,651.39,Operations,Bank Transfer
+EXP-00325,2025-12-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00326,2025-12-25,Travel,Client visit travel,187.45,Sales,Company Card
+EXP-00327,2025-12-26,Office Supplies,Breakroom supplies,151.05,Operations,Company Card
+EXP-00328,2025-12-28,Salaries,Finance team salaries,1900.00,Finance,Bank Transfer
+EXP-00329,2025-12-28,Salaries,Human Resources team salaries,1400.00,Human Resources,Bank Transfer
+EXP-00330,2025-12-28,Salaries,IT team salaries,1700.00,IT,Bank Transfer
+EXP-00331,2025-12-28,Salaries,Marketing team salaries,2100.00,Marketing,Bank Transfer
+EXP-00332,2025-12-28,Salaries,Operations team salaries,2900.00,Operations,Bank Transfer
+EXP-00333,2025-12-28,Salaries,Sales team salaries,3000.00,Sales,Bank Transfer
+EXP-00334,2025-12-29,Shipping & Logistics,Weekly carrier invoice,736.96,Operations,Bank Transfer
+EXP-00335,2025-12-31,Bank & Payment Fees,Card payment processing fees,712.94,Finance,Direct Debit
+EXP-00336,2026-01-01,Rent,Monthly office and warehouse rent,2500.00,Operations,Bank Transfer
+EXP-00337,2026-01-03,Marketing,Online advertising campaign,1100.31,Marketing,Company Card
+EXP-00338,2026-01-05,Shipping & Logistics,Weekly carrier invoice,479.19,Operations,Bank Transfer
+EXP-00339,2026-01-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00340,2026-01-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00341,2026-01-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00342,2026-01-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00343,2026-01-08,Packaging,Packaging materials order,274.42,Operations,Bank Transfer
+EXP-00344,2026-01-10,Utilities,Electricity bill,578.92,Operations,Direct Debit
+EXP-00345,2026-01-10,Utilities,Water bill,65.63,Operations,Direct Debit
+EXP-00346,2026-01-12,Shipping & Logistics,Weekly carrier invoice,428.96,Operations,Bank Transfer
+EXP-00347,2026-01-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00348,2026-01-15,Insurance,Quarterly business insurance premium,1150.00,Finance,Bank Transfer
+EXP-00349,2026-01-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00350,2026-01-19,Shipping & Logistics,Weekly carrier invoice,341.11,Operations,Bank Transfer
+EXP-00351,2026-01-20,Professional Services,Quarterly accounting review,750.00,Finance,Bank Transfer
+EXP-00352,2026-01-22,Packaging,Packaging materials order,288.24,Operations,Bank Transfer
+EXP-00353,2026-01-23,Office Supplies,Cleaning supplies,84.65,Operations,Company Card
+EXP-00354,2026-01-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00355,2026-01-26,Shipping & Logistics,Weekly carrier invoice,426.59,Operations,Bank Transfer
+EXP-00356,2026-01-28,Salaries,Finance team salaries,1957.00,Finance,Bank Transfer
+EXP-00357,2026-01-28,Salaries,Human Resources team salaries,1442.00,Human Resources,Bank Transfer
+EXP-00358,2026-01-28,Salaries,IT team salaries,1751.00,IT,Bank Transfer
+EXP-00359,2026-01-28,Salaries,Marketing team salaries,2163.00,Marketing,Bank Transfer
+EXP-00360,2026-01-28,Salaries,Operations team salaries,2987.00,Operations,Bank Transfer
+EXP-00361,2026-01-28,Salaries,Sales team salaries,3090.00,Sales,Bank Transfer
+EXP-00362,2026-01-31,Bank & Payment Fees,Card payment processing fees,403.85,Finance,Direct Debit
+EXP-00363,2026-02-01,Rent,Monthly office and warehouse rent,2500.00,Operations,Bank Transfer
+EXP-00364,2026-02-02,Shipping & Logistics,Weekly carrier invoice,398.85,Operations,Bank Transfer
+EXP-00365,2026-02-03,Marketing,Online advertising campaign,1000.63,Marketing,Company Card
+EXP-00366,2026-02-03,Office Supplies,Printer paper and toner,173.24,Human Resources,Cash
+EXP-00367,2026-02-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00368,2026-02-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00369,2026-02-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00370,2026-02-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00371,2026-02-08,Packaging,Packaging materials order,274.35,Operations,Bank Transfer
+EXP-00372,2026-02-09,Shipping & Logistics,Weekly carrier invoice,453.34,Operations,Bank Transfer
+EXP-00373,2026-02-10,Utilities,Electricity bill,534.76,Operations,Direct Debit
+EXP-00374,2026-02-10,Utilities,Water bill,62.90,Operations,Direct Debit
+EXP-00375,2026-02-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00376,2026-02-16,Shipping & Logistics,Weekly carrier invoice,405.05,Operations,Bank Transfer
+EXP-00377,2026-02-17,Equipment,Laptop replacement,1290.00,IT,Company Card
+EXP-00378,2026-02-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00379,2026-02-22,Packaging,Packaging materials order,267.51,Operations,Bank Transfer
+EXP-00380,2026-02-23,Shipping & Logistics,Weekly carrier invoice,350.80,Operations,Bank Transfer
+EXP-00381,2026-02-25,Office Supplies,Breakroom supplies,91.62,Finance,Cash
+EXP-00382,2026-02-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00383,2026-02-28,Bank & Payment Fees,Card payment processing fees,421.19,Finance,Direct Debit
+EXP-00384,2026-02-28,Salaries,Finance team salaries,1957.00,Finance,Bank Transfer
+EXP-00385,2026-02-28,Salaries,Human Resources team salaries,1442.00,Human Resources,Bank Transfer
+EXP-00386,2026-02-28,Salaries,IT team salaries,1751.00,IT,Bank Transfer
+EXP-00387,2026-02-28,Salaries,Marketing team salaries,2163.00,Marketing,Bank Transfer
+EXP-00388,2026-02-28,Salaries,Operations team salaries,2987.00,Operations,Bank Transfer
+EXP-00389,2026-02-28,Salaries,Sales team salaries,3090.00,Sales,Bank Transfer
+EXP-00390,2026-03-01,Rent,Monthly office and warehouse rent,2500.00,Operations,Bank Transfer
+EXP-00391,2026-03-02,Shipping & Logistics,Weekly carrier invoice,424.43,Operations,Bank Transfer
+EXP-00392,2026-03-03,Marketing,Online advertising campaign,1428.51,Marketing,Company Card
+EXP-00393,2026-03-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00394,2026-03-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00395,2026-03-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00396,2026-03-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00397,2026-03-08,Office Supplies,Stationery restock,163.69,Human Resources,Cash
+EXP-00398,2026-03-08,Packaging,Packaging materials order,314.51,Operations,Bank Transfer
+EXP-00399,2026-03-09,Shipping & Logistics,Weekly carrier invoice,364.30,Operations,Bank Transfer
+EXP-00400,2026-03-10,Utilities,Electricity bill,445.78,Operations,Direct Debit
+EXP-00401,2026-03-10,Utilities,Water bill,65.16,Operations,Direct Debit
+EXP-00402,2026-03-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00403,2026-03-16,Shipping & Logistics,Weekly carrier invoice,465.62,Operations,Bank Transfer
+EXP-00404,2026-03-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00405,2026-03-22,Packaging,Packaging materials order,359.08,Operations,Bank Transfer
+EXP-00406,2026-03-23,Office Supplies,Stationery restock,128.50,Operations,Cash
+EXP-00407,2026-03-23,Shipping & Logistics,Weekly carrier invoice,458.29,Operations,Bank Transfer
+EXP-00408,2026-03-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00409,2026-03-28,Salaries,Finance team salaries,1957.00,Finance,Bank Transfer
+EXP-00410,2026-03-28,Salaries,Human Resources team salaries,1442.00,Human Resources,Bank Transfer
+EXP-00411,2026-03-28,Salaries,IT team salaries,1751.00,IT,Bank Transfer
+EXP-00412,2026-03-28,Salaries,Marketing team salaries,2163.00,Marketing,Bank Transfer
+EXP-00413,2026-03-28,Salaries,Operations team salaries,2987.00,Operations,Bank Transfer
+EXP-00414,2026-03-28,Salaries,Sales team salaries,3090.00,Sales,Bank Transfer
+EXP-00415,2026-03-30,Shipping & Logistics,Weekly carrier invoice,483.87,Operations,Bank Transfer
+EXP-00416,2026-03-31,Bank & Payment Fees,Card payment processing fees,540.00,Finance,Direct Debit
+EXP-00417,2026-04-01,Rent,Monthly office and warehouse rent,2500.00,Operations,Bank Transfer
+EXP-00418,2026-04-03,Marketing,Online advertising campaign,1527.39,Marketing,Company Card
+EXP-00419,2026-04-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00420,2026-04-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00421,2026-04-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00422,2026-04-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00423,2026-04-06,Shipping & Logistics,Weekly carrier invoice,637.41,Operations,Bank Transfer
+EXP-00424,2026-04-07,Travel,Trade fair attendance travel,304.61,Sales,Company Card
+EXP-00425,2026-04-08,Packaging,Packaging materials order,350.56,Operations,Bank Transfer
+EXP-00426,2026-04-09,Travel,Trade fair attendance travel,464.97,Sales,Company Card
+EXP-00427,2026-04-10,Office Supplies,Printer paper and toner,75.48,Operations,Cash
+EXP-00428,2026-04-10,Utilities,Electricity bill,392.79,Operations,Direct Debit
+EXP-00429,2026-04-10,Utilities,Water bill,65.87,Operations,Direct Debit
+EXP-00430,2026-04-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00431,2026-04-13,Shipping & Logistics,Weekly carrier invoice,563.05,Operations,Bank Transfer
+EXP-00432,2026-04-15,Insurance,Quarterly business insurance premium,1150.00,Finance,Bank Transfer
+EXP-00433,2026-04-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00434,2026-04-20,Professional Services,Quarterly accounting review,750.00,Finance,Bank Transfer
+EXP-00435,2026-04-20,Shipping & Logistics,Weekly carrier invoice,449.21,Operations,Bank Transfer
+EXP-00436,2026-04-22,Packaging,Packaging materials order,346.04,Operations,Bank Transfer
+EXP-00437,2026-04-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00438,2026-04-27,Office Supplies,Cleaning supplies,162.27,Operations,Company Card
+EXP-00439,2026-04-27,Shipping & Logistics,Weekly carrier invoice,509.93,Operations,Bank Transfer
+EXP-00440,2026-04-28,Salaries,Finance team salaries,1957.00,Finance,Bank Transfer
+EXP-00441,2026-04-28,Salaries,Human Resources team salaries,1442.00,Human Resources,Bank Transfer
+EXP-00442,2026-04-28,Salaries,IT team salaries,1751.00,IT,Bank Transfer
+EXP-00443,2026-04-28,Salaries,Marketing team salaries,2163.00,Marketing,Bank Transfer
+EXP-00444,2026-04-28,Salaries,Operations team salaries,2987.00,Operations,Bank Transfer
+EXP-00445,2026-04-28,Salaries,Sales team salaries,3090.00,Sales,Bank Transfer
+EXP-00446,2026-04-30,Bank & Payment Fees,Card payment processing fees,555.38,Finance,Direct Debit
+EXP-00447,2026-05-01,Rent,Monthly office and warehouse rent,2500.00,Operations,Bank Transfer
+EXP-00448,2026-05-03,Marketing,Online advertising campaign,1541.17,Marketing,Company Card
+EXP-00449,2026-05-04,Shipping & Logistics,Weekly carrier invoice,486.30,Operations,Bank Transfer
+EXP-00450,2026-05-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00451,2026-05-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00452,2026-05-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00453,2026-05-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00454,2026-05-06,Equipment,Label printer,340.00,Operations,Company Card
+EXP-00455,2026-05-08,Packaging,Packaging materials order,369.41,Operations,Bank Transfer
+EXP-00456,2026-05-10,Utilities,Electricity bill,385.46,Operations,Direct Debit
+EXP-00457,2026-05-10,Utilities,Water bill,63.16,Operations,Direct Debit
+EXP-00458,2026-05-11,Shipping & Logistics,Weekly carrier invoice,549.83,Operations,Bank Transfer
+EXP-00459,2026-05-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00460,2026-05-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00461,2026-05-18,Shipping & Logistics,Weekly carrier invoice,493.03,Operations,Bank Transfer
+EXP-00462,2026-05-22,Packaging,Packaging materials order,399.81,Operations,Bank Transfer
+EXP-00463,2026-05-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00464,2026-05-25,Shipping & Logistics,Weekly carrier invoice,491.34,Operations,Bank Transfer
+EXP-00465,2026-05-26,Office Supplies,Stationery restock,107.61,Finance,Cash
+EXP-00466,2026-05-28,Salaries,Finance team salaries,1957.00,Finance,Bank Transfer
+EXP-00467,2026-05-28,Salaries,Human Resources team salaries,1442.00,Human Resources,Bank Transfer
+EXP-00468,2026-05-28,Salaries,IT team salaries,1751.00,IT,Bank Transfer
+EXP-00469,2026-05-28,Salaries,Marketing team salaries,2163.00,Marketing,Bank Transfer
+EXP-00470,2026-05-28,Salaries,Operations team salaries,2987.00,Operations,Bank Transfer
+EXP-00471,2026-05-28,Salaries,Sales team salaries,3090.00,Sales,Bank Transfer
+EXP-00472,2026-05-31,Bank & Payment Fees,Card payment processing fees,630.69,Finance,Direct Debit
+EXP-00473,2026-06-01,Rent,Monthly office and warehouse rent,2500.00,Operations,Bank Transfer
+EXP-00474,2026-06-01,Shipping & Logistics,Weekly carrier invoice,613.43,Operations,Bank Transfer
+EXP-00475,2026-06-03,Marketing,Online advertising campaign,1221.46,Marketing,Company Card
+EXP-00476,2026-06-05,Software Subscriptions,Accounting software subscription,59.00,Finance,Company Card
+EXP-00477,2026-06-05,Software Subscriptions,Cloud storage plan,24.00,IT,Company Card
+EXP-00478,2026-06-05,Software Subscriptions,Email marketing tool subscription,45.00,Marketing,Company Card
+EXP-00479,2026-06-05,Software Subscriptions,Online store platform subscription,129.00,IT,Company Card
+EXP-00480,2026-06-08,Packaging,Packaging materials order,292.76,Operations,Bank Transfer
+EXP-00481,2026-06-08,Shipping & Logistics,Weekly carrier invoice,427.53,Operations,Bank Transfer
+EXP-00482,2026-06-10,Office Supplies,Stationery restock,86.02,Human Resources,Company Card
+EXP-00483,2026-06-10,Utilities,Electricity bill,407.08,Operations,Direct Debit
+EXP-00484,2026-06-10,Utilities,Water bill,60.95,Operations,Direct Debit
+EXP-00485,2026-06-12,Utilities,Business internet service,89.99,IT,Direct Debit
+EXP-00486,2026-06-15,Shipping & Logistics,Weekly carrier invoice,435.15,Operations,Bank Transfer
+EXP-00487,2026-06-18,Marketing,Social media content production,350.00,Marketing,Company Card
+EXP-00488,2026-06-22,Office Supplies,Breakroom supplies,84.29,Human Resources,Company Card
+EXP-00489,2026-06-22,Packaging,Packaging materials order,255.10,Operations,Bank Transfer
+EXP-00490,2026-06-22,Shipping & Logistics,Weekly carrier invoice,470.50,Operations,Bank Transfer
+EXP-00491,2026-06-25,Professional Services,Website maintenance retainer,280.00,IT,Bank Transfer
+EXP-00492,2026-06-28,Salaries,Finance team salaries,1957.00,Finance,Bank Transfer
+EXP-00493,2026-06-28,Salaries,Human Resources team salaries,1442.00,Human Resources,Bank Transfer
+EXP-00494,2026-06-28,Salaries,IT team salaries,1751.00,IT,Bank Transfer
+EXP-00495,2026-06-28,Salaries,Marketing team salaries,2163.00,Marketing,Bank Transfer
+EXP-00496,2026-06-28,Salaries,Operations team salaries,2987.00,Operations,Bank Transfer
+EXP-00497,2026-06-28,Salaries,Sales team salaries,3090.00,Sales,Bank Transfer
+EXP-00498,2026-06-29,Shipping & Logistics,Weekly carrier invoice,308.53,Operations,Bank Transfer
+EXP-00499,2026-06-30,Bank & Payment Fees,Card payment processing fees,455.62,Finance,Direct Debit

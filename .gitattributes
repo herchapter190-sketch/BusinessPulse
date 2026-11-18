@@ -1,0 +1,4 @@
+# Keep the sample datasets byte-for-byte identical on every computer.
+# Their SHA-256 fingerprints are stored in data/sample/checksums.json and
+# checked by the tests, so Git must never convert their line endings.
+data/sample/** -text

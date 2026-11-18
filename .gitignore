@@ -1,0 +1,49 @@
+# ---- Virtual environment ----
+.venv/
+venv/
+
+# ---- Secrets and credentials (never commit) ----
+.env
+.env.*
+*.pem
+*.key
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+
+# ---- Private user data and generated output ----
+# Keep the folders (via .gitkeep) but never their contents.
+data/uploads/*
+!data/uploads/.gitkeep
+reports/*
+!reports/.gitkeep
+
+# ---- Temporary processing files ----
+.tmp/
+
+# ---- Python cache, test and build output ----
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+*.log
+
+# ---- Spreadsheets loose in the project's main folder (may be private business data) ----
+/*.csv
+/*.xlsx
+/*.xls
+
+# ---- Private assistant instructions ----
+CLAUDE.md
+
+# ---- Editor / AI-assistant / OS clutter ----
+.vscode/
+.idea/
+.claude/
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*

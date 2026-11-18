@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="BusinessPulse">
+  <!-- BusinessPulse icon: the logo tile, one ink colour, pulse line cut out. -->
+  <defs><mask id="bp-cut"><rect width="28" height="28" fill="#FFFFFF"/><polyline points="4.5,15 9,15 11.5,8 15.5,21.5 18.5,12 20.5,15 23.5,15" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs>
+  <g transform="translate(2 2)"><rect width="28" height="28" rx="8" fill="#08241F" mask="url(#bp-cut)"/></g>
+</svg>
